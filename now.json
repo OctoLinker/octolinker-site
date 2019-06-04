@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "name": "octolinker-site",
+  "builds": [
+    {
+      "src": "package.json",
+      "use": "@now/static-build"
+    }
+  ],
+  "alias": [
+    "octolinker.now.sh"
+  ]
+}
