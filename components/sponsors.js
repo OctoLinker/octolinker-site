@@ -113,8 +113,8 @@ export default function Sponsors() {
             high performance as a caching layer to reduce network calls to
             third-party providers such as <Code>npmjs.com</Code>,{" "}
             <Code>getcomposer.org</Code>, <Code>rubygems.org</Code> and more.
-            RedisGreen supports OctoLinker with four dedicated servers and high
-            availability in four regions.
+            RedisGreen supports OctoLinker with five dedicated servers and high
+            availability in five regions.
           </p>
         </div>
       </div>
