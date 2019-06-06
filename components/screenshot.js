@@ -1,3 +1,6 @@
+import InlineDemo from "./inlineDemo";
+import HideOnMobile from "./hide-on-mobile";
+
 export default function Screenshot() {
   return (
     <>
@@ -22,13 +25,30 @@ export default function Screenshot() {
           @media only screen and (min-width: 768px) {
             .screenshot {
               margin: 6rem auto 1rem auto;
+              background-image: url(/static/screenshot_blank.png);
+            }
+          }
+
+          .live-demo {
+            text-align: center;
+          }
+
+          @media only screen and (min-width: 768px) {
+            .live-demo {
+              margin: 2rem 0 5rem 0;
             }
           }
         `}
       </style>
       <div className="screenshot">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1786 1340"></svg>
+        <HideOnMobile>
+          <InlineDemo />
+        </HideOnMobile>
       </div>
+      <p className="live-demo">
+        Check out our <a href="https://octolinker-demo.now.sh/">live demo</a>, right in your browser, no install required!
+      </p>
     </>
   );
 }
