@@ -103,6 +103,15 @@ export default function Backers() {
           />
         </a>
         <a
+          href="https://opencollective.com/danoc"
+          target="_blank"
+        >
+          <img
+            src="https://images.opencollective.com/danoc/avatar.png"
+            width="64"
+          />
+        </a>
+        <a
           href="https://opencollective.com/octolinker"
           target="_blank"
           onClick={trackEvent.bind(null, {
