@@ -1,7 +1,9 @@
 import Link from "next/link";
+import dynamic from 'next/dynamic';
 import Container from "./container";
-import InstallButton from "./installButton";
 import HideOnMobile from "./hide-on-mobile";
+
+const InstallButton = dynamic(import ('./installButton'),{ssr:false});
 
 export default function Nav() {
   return (

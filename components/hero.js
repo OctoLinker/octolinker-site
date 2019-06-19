@@ -1,8 +1,10 @@
+import dynamic from 'next/dynamic';
 import Container from "./container";
 import Button from "./button";
-import InstallButton from "./installButton";
 import Code from "./code";
 import { trackEvent } from "../lib/analytics";
+
+const InstallButton = dynamic(import ('./installButton'),{ssr:false});
 
 export default function Nav() {
   return (

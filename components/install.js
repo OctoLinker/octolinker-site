@@ -1,5 +1,7 @@
-import InstallButton from "./installButton";
+import dynamic from 'next/dynamic';
 import { trackEvent } from "../lib/analytics";
+
+const InstallButton = dynamic(import ('./installButton'),{ssr:false});
 
 export default function Install() {
   return (

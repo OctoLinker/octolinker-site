@@ -1,5 +1,5 @@
 import Button from "./button";
-import bowser from "bowser";
+import Bowser from "bowser";
 import { trackEvent } from "../lib/analytics";
 
 export default function Install({ children, trackingLabel, compact }) {
@@ -18,7 +18,9 @@ export default function Install({ children, trackingLabel, compact }) {
       url: "https://addons.opera.com/en/extensions/details/octolinker/"
     }
   };
-  const details = supported[bowser.name.toLowerCase()] || supported.chrome;
+
+  const browser = Bowser.getParser(window.navigator.userAgent);
+  const details = supported[browser.getBrowser().name.toLowerCase()] || supported.chrome;
   const buttonUrl = details.url;
   const buttonLabel = compact ? "Install" : details.text;
 
