@@ -4,7 +4,7 @@
     "now-build": "next build && next export -o dist"
   },
   "dependencies": {
-    "bowser": "^2.4.0",
+    "bowser": "^2.5.3",
     "classnames": "^2.2.6",
     "next": "^9.0.3",
     "react": "^16.8.6",
