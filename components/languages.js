@@ -24,9 +24,9 @@ export default function Languages() {
         }
       `}</style>
       <div className="language-boxes">
-        <LanguageBox image="static/bower.png" label="bower" />
         <LanguageBox image="static/composer.png" label="composer" />
         <LanguageBox image="static/css.png" label="css" />
+        <LanguageBox image="static/deno.png" label="Deno" />
         <LanguageBox image="static/docker.png" label="docker" />
         <LanguageBox image="static/go.png" label="go" />
         <LanguageBox image="static/haskell.png" label="Haskell" />
