@@ -35,7 +35,7 @@ export default function Features() {
           <h3>API Docs</h3>
           <p>
             Forgot the signature of core library method? No worries, OctoLinker
-            links to API docs sucha as{" "}
+            links to API docs such as{" "}
             <a href="https://nodejs.org/docs">nodejs.org/en/docs</a>{" "}
             <a href="https://docs.python.org">docs.python.org</a>{" "}
             <a href="https://docs.oracle.com">docs.oracle.com</a> or{" "}
