@@ -1,7 +1,7 @@
 {
   "scripts": {
     "dev": "next dev",
-    "now-build": "next build && next export -o dist"
+    "build": "next build && next export"
   },
   "dependencies": {
     "bowser": "^2.7.0",
