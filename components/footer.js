@@ -55,10 +55,10 @@ export default function Footer() {
         `}
       </style>
       <span>&copy; OctoLinker 2019</span>
-      <Link href="/privacy.html">
+      <Link href="/privacy">
         <a>Privacy</a>
       </Link>
-      <Link href="/media.html">
+      <Link href="/media">
         <a>Media</a>
       </Link>
       <a href="https://twitter.com/octolinker">Twitter</a>
