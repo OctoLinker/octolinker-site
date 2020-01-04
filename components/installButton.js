@@ -16,10 +16,15 @@ export default function Install({ children, trackingLabel, compact }) {
     opera: {
       text: "Install for Opera",
       url: "https://addons.opera.com/en/extensions/details/octolinker/"
+    },
+    'microsoft edge': {
+      text: "Install for Microsoft Edge",
+      url: "https://microsoftedge.microsoft.com/addons/detail/lbbanfffjfmfdahnfbklminikafhcjjb"
     }
   };
 
   const browser = Bowser.getParser(window.navigator.userAgent);
+  console.log('xx', browser.getBrowser())
   const details = supported[browser.getBrowser().name.toLowerCase()] || supported.chrome;
   const buttonUrl = details.url;
   const buttonLabel = compact ? "Install" : details.text;
