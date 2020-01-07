@@ -23,6 +23,7 @@ export default function Nav() {
           }
 
           .nav-item {
+            cursor: pointer;
             font-size: 12px;
             line-height: 46px;
 
@@ -66,25 +67,25 @@ export default function Nav() {
         <Container>
           <nav className="nav">
             <div className="nav-menu-wrapper">
-              <Link>
-                <a className="nav-item" href="/#how-it-works">
+              <Link href="#how-it-works">
+                <span className="nav-item">
                   How it works
-                </a>
+                </span>
               </Link>
-              <Link>
-                <a className="nav-item" href="/#features">
+              <Link href="#features">
+                <span className="nav-item">
                   Features
-                </a>
+                </span>
               </Link>
-              <Link>
-                <a className="nav-item" href="/#languages">
+              <Link href="#languages">
+                <span className="nav-item">
                   Languages
-                </a>
+                </span>
               </Link>
-              <Link>
-                <a className="nav-item" href="/#sponsors">
+              <Link href="#sponsors">
+                <span className="nav-item">
                   Sponsors
-                </a>
+                </span>
               </Link>
             </div>
             <div className="right">
