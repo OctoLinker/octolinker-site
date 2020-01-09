@@ -74,7 +74,7 @@ export default function Install() {
       </p>
       <InstallButton trackingLabel="install-footer" />
       <div className="install-count">
-        <small>Trusted by over 20,000 developers</small>
+        <small>Trusted by over 25,000 developers</small>
       </div>
     </>
   );
