@@ -44,8 +44,20 @@ export default function Install() {
           rel="nofollow"
         >
           <nobr>Mozilla Add-ons Store</nobr>
-        </a>{" "}
-        or{" "}
+        </a>
+        ,{" "}
+        <a
+          href="https://microsoftedge.microsoft.com/addons/detail/lbbanfffjfmfdahnfbklminikafhcjjb"
+          onClick={trackEvent.bind(null, {
+            action: "click",
+            category: "install",
+            label: "store-edge"
+          })}
+          rel="nofollow"
+        >
+          <nobr>Microsoft Store</nobr>
+        </a>
+        {" and "}
         <a
           href="https://addons.opera.com/en/extensions/details/octolinker/"
           onClick={trackEvent.bind(null, {
@@ -56,7 +68,7 @@ export default function Install() {
           rel="nofollow"
         >
           <nobr>Opera Add-ons Store</nobr>
-        </a>
+        </a>.
         <br />
         Install and enhance your GitHub experience.
       </p>
