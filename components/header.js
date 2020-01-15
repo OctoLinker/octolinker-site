@@ -67,22 +67,22 @@ export default function Nav() {
         <Container>
           <nav className="nav">
             <div className="nav-menu-wrapper">
-              <Link href="#how-it-works">
+              <Link href="/#how-it-works">
                 <span className="nav-item">
                   How it works
                 </span>
               </Link>
-              <Link href="#features">
+              <Link href="/#features">
                 <span className="nav-item">
                   Features
                 </span>
               </Link>
-              <Link href="#languages">
+              <Link href="/#languages">
                 <span className="nav-item">
                   Languages
                 </span>
               </Link>
-              <Link href="#sponsors">
+              <Link href="/#sponsors">
                 <span className="nav-item">
                   Sponsors
                 </span>
