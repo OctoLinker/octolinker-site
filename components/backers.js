@@ -72,7 +72,24 @@ export default function Backers() {
       `}</style>
       <p>
         I am truly grateful to all the wonderful humans and companies supporting
-        the development of OctoLinker.
+        the development of OctoLinker. 
+        Please consider donations through <a
+          href="https://github.com/sponsors/stefanbuck/"
+          target="_blank"
+          onClick={trackEvent.bind(null, {
+            action: "click",
+            category: "button",
+            label: "github-sponsors"
+          })}
+        >GitHub Sponsors</a> or <a
+          href="https://opencollective.com/octolinker"
+          target="_blank"
+          onClick={trackEvent.bind(null, {
+            action: "click",
+            category: "button",
+            label: "opencollective"
+          })}
+        >Open Collective</a> – Thank you 🙇‍♂️
       </p>
       <div className="backers">
         <a
@@ -112,7 +129,7 @@ export default function Backers() {
           />
         </a>
         <a
-          href="https://opencollective.com/octolinker"
+          href="https://github.com/sponsors/stefanbuck/"
           target="_blank"
           onClick={trackEvent.bind(null, {
             action: "click",
