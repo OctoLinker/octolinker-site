@@ -129,6 +129,15 @@ export default function Backers() {
           />
         </a>
         <a
+          href="https://opencollective.com/woorke"
+          target="_blank"
+        >
+          <img
+            src="https://images.opencollective.com/woorke/avatar.png"
+            width="64"
+          />
+        </a>
+        <a
           href="https://github.com/sponsors/stefanbuck/"
           target="_blank"
           onClick={trackEvent.bind(null, {
