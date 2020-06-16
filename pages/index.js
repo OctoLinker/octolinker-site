@@ -8,6 +8,7 @@ import Languages from "../components/languages";
 import Features from "../components/features";
 import HowItWorks from "../components/howItWorks";
 import Screenshot from "../components/screenshot";
+import Newsletter from "../components/newsletter";
 import Mascot from "../components/mascot";
 import InstallButton from "../components/installButton";
 
@@ -49,6 +50,9 @@ function Home() {
       <Container colored={true} center={true}>
         <h1>Install OctoLinker</h1>
         <Install />
+      </Container>
+      <Container center={true}>
+        <Newsletter />
       </Container>
     </>
   );

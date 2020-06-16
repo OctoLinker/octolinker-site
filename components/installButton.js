@@ -24,7 +24,6 @@ export default function Install({ children, trackingLabel, compact }) {
   };
 
   const browser = Bowser.getParser(window.navigator.userAgent);
-  console.log('xx', browser.getBrowser())
   const details = supported[browser.getBrowser().name.toLowerCase()] || supported.chrome;
   const buttonUrl = details.url;
   const buttonLabel = compact ? "Install" : details.text;
