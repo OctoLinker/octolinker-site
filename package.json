@@ -4,7 +4,7 @@
     "build": "next build && next export"
   },
   "dependencies": {
-    "bowser": "^2.9.0",
+    "bowser": "^2.10.0",
     "classnames": "^2.2.6",
     "next": "^9.4.4",
     "react": "^16.13.1",
