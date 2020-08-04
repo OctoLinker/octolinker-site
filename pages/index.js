@@ -39,6 +39,9 @@ function Home() {
         <h1>What people are saying</h1>
         <Tweets />
       </Container>
+      <Container center={true}>
+        <Newsletter />
+      </Container>
       <Container colored={true} center={true}>
         <h1>Backers</h1>
         <Backers />
@@ -50,9 +53,6 @@ function Home() {
       <Container colored={true} center={true}>
         <h1>Install OctoLinker</h1>
         <Install />
-      </Container>
-      <Container center={true}>
-        <Newsletter />
       </Container>
     </>
   );
