@@ -45,18 +45,18 @@ export default function Sponsors() {
       <div className="sponsor-boxes">
         <div>
           <a
-            href="https://zeit.co"
+            href="https://vercel.com/"
             onClick={trackEvent.bind(null, {
               action: "click",
               category: "sponsor",
-              label: "logo-zeit"
+              label: "logo-vercel"
             })}
           >
             <div
               className="octofriends"
               style={{
                 backgroundColor: "#000",
-                backgroundImage: "url(static/zeit.png)",
+                backgroundImage: "url(static/vercel.png)",
                 backgroundPositionY: "54%",
                 backgroundSize: "65%"
               }}
@@ -64,18 +64,18 @@ export default function Sponsors() {
           </a>
           <p>
             <a
-              href="https://zeit.co/"
+              href="https://vercel.co/"
               onClick={trackEvent.bind(null, {
                 action: "click",
                 category: "sponsor",
-                label: "link-zeit"
+                label: "link-vercel"
               })}
             >
-              ZEIT Now
+              Vercel
             </a>{" "}
             enables OctoLinker on demand horizontal scaling across many regions in a
             serverless environment. I worked with other cloud vendors before,
-            but none of them was nearly as easy to use as ZEIT now. It’s a
+            but none of them was nearly as easy to use as Vercel. It’s a
             really impressive and satisfying developer experience! 
           </p>
         </div>

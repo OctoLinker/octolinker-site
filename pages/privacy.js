@@ -141,11 +141,11 @@ function Privacy() {
           </li>
         </ul>
         <h2 id="technologies-we-use">Technologies we use</h2>
-        <h3>ZEIT</h3>
+        <h3>Vercel</h3>
         <p>
-          We use ZEIT for hosting our OctoLinker API. You can read{" "}
-          <a href="https://zeit.co/privacy" rel="nofollow">
-            ZEIT's privacy terms
+          We use Vercel for hosting our OctoLinker API. You can read{" "}
+          <a href="https://vercel.com/legal/privacy-policy" rel="nofollow">
+            Vercel's privacy terms
           </a>
           .
         </p>

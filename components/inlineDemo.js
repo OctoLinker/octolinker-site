@@ -253,7 +253,7 @@ export default function InlineDemo() {
                         category: "inline-demo",
                         label: "L2"
                       })}
-                      href="https://octolinker-demo.now.sh/zeit/micro"
+                      href="https://octolinker-demo.now.sh/vercel/micro"
                     >
                       micro
                     </a>
