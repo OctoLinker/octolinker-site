@@ -6,7 +6,7 @@
   "dependencies": {
     "bowser": "^2.10.0",
     "classnames": "^2.2.6",
-    "next": "^9.5.2",
+    "next": "^9.5.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1"
   }
