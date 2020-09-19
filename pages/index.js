@@ -33,14 +33,18 @@ function Home() {
       <Container colored={true}>
         <h1 id="languages">Supported languages</h1>
         <Languages />
+
+        <Container colored={false} center={true}>
+
+        <h1>OctoLinker is just the beginning!</h1>
+        <Newsletter />
+
+      </Container>
       </Container>
       <Container>
         <Mascot src="static/mascot-baby.png" width="123" />
         <h1>What people are saying</h1>
         <Tweets />
-      </Container>
-      <Container center={true}>
-        <Newsletter />
       </Container>
       <Container colored={true} center={true}>
         <h1>Backers</h1>
