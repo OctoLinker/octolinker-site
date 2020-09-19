@@ -1,5 +1,7 @@
 import Document, { Html, Head, Main, NextScript } from "next/document";
-import { GA_TRACKING_ID } from "../lib/analytics";
+
+const PLAUSIBLE_ENABLED = process.env.PLAUSIBLE_ENABLED || false
+const plausibleSnippet = 'window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }';
 
 export default class NextSite extends Document {
   render() {
@@ -57,19 +59,11 @@ export default class NextSite extends Document {
             type="image/x-icon"
           />
           <link rel="icon" href="/static/favicon.ico" type="image/x-icon" />
+          {PLAUSIBLE_ENABLED && (<script async defer data-domain="octolinker.now.sh" src="https://plausible.io/js/plausible.js" />)}
           <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
-          />
-          <script
+            // eslint-disable-next-line react/no-danger
             dangerouslySetInnerHTML={{
-              __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('set', 'anonymizeIp', true);
-                  gtag('config', '${GA_TRACKING_ID}');
-                `
+              __html: plausibleSnippet
             }}
           />
         </Head>

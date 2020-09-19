@@ -1,23 +1,26 @@
 import Button from "./button";
 import Bowser from "bowser";
-import { trackEvent } from "../lib/analytics";
 
-export default function Install({ children, trackingLabel, compact }) {
+export default function Install({ children, compact }) {
   const supported = {
     chrome: {
+      eventName: 'install: chrome',
       text: "Install for Google Chrome",
       url:
         "https://chrome.google.com/webstore/detail/octo-linker/jlmafbaeoofdegohdhinkhilhclaklkp"
     },
     firefox: {
+      eventName: 'install: firefox',
       text: "Install for Mozilla Firefox",
       url: "https://addons.mozilla.org/en-US/firefox/addon/octolinker/"
     },
     opera: {
+      eventName: 'install: opera',
       text: "Install for Opera",
       url: "https://addons.opera.com/en/extensions/details/octolinker/"
     },
     'microsoft edge': {
+      eventName: 'install: edge',
       text: "Install for Microsoft Edge",
       url: "https://microsoftedge.microsoft.com/addons/detail/lbbanfffjfmfdahnfbklminikafhcjjb"
     }
@@ -33,12 +36,7 @@ export default function Install({ children, trackingLabel, compact }) {
       compact={compact}
       href={buttonUrl}
       onClick={function() {
-        trackEvent({
-          action: "click",
-          category: "install",
-          label: trackingLabel,
-          value: buttonUrl
-        });
+        window.plausible(details.eventName)
       }}
     >
       {buttonLabel}

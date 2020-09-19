@@ -1,5 +1,4 @@
 import Code from "./code";
-import { trackEvent } from "../lib/analytics";
 
 export default function Sponsors() {
   return (
@@ -46,11 +45,6 @@ export default function Sponsors() {
         <div>
           <a
             href="https://vercel.com/"
-            onClick={trackEvent.bind(null, {
-              action: "click",
-              category: "sponsor",
-              label: "logo-vercel"
-            })}
           >
             <div
               className="octofriends"
@@ -63,14 +57,7 @@ export default function Sponsors() {
             />
           </a>
           <p>
-            <a
-              href="https://vercel.co/"
-              onClick={trackEvent.bind(null, {
-                action: "click",
-                category: "sponsor",
-                label: "link-vercel"
-              })}
-            >
+            <a href="https://vercel.com/">
               Vercel
             </a>{" "}
             enables OctoLinker on demand horizontal scaling across many regions in a
@@ -80,14 +67,7 @@ export default function Sponsors() {
           </p>
         </div>
         <div>
-          <a
-            href="https://redisgreen.net"
-            onClick={trackEvent.bind(null, {
-              action: "click",
-              category: "sponsor",
-              label: "logo-redisgreen"
-            })}
-          >
+          <a href="https://redisgreen.net">
             <div
               className="octofriends"
               style={{
@@ -100,14 +80,7 @@ export default function Sponsors() {
           </a>
           <p>
             We leverage{" "}
-            <a
-              href="https://redisgreen.net"
-              onClick={trackEvent.bind(null, {
-                action: "click",
-                category: "sponsor",
-                label: "link-redisgreen"
-              })}
-            >
+            <a href="https://redisgreen.net">
               RedisGreen
             </a>{" "}
             high performance as a caching layer to reduce network calls to

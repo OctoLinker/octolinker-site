@@ -1,5 +1,3 @@
-import { trackEvent } from "../lib/analytics";
-
 export default function InlineDemo() {
   return (
     <>
@@ -216,11 +214,6 @@ export default function InlineDemo() {
                     <a
                       data-pjax="true"
                       className="octolinker-link"
-                      onClick={trackEvent.bind(null, {
-                        action: "click",
-                        category: "inline-demo",
-                        label: "L1"
-                      })}
                       href="https://nodejs.org/api/url.html"
                     >
                       url
@@ -248,11 +241,6 @@ export default function InlineDemo() {
                     <a
                       data-pjax="true"
                       className="octolinker-link"
-                      onClick={trackEvent.bind(null, {
-                        action: "click",
-                        category: "inline-demo",
-                        label: "L2"
-                      })}
                       href="https://octolinker-demo.now.sh/vercel/micro"
                     >
                       micro
@@ -280,11 +268,6 @@ export default function InlineDemo() {
                     <a
                       data-pjax="true"
                       className="octolinker-link"
-                      onClick={trackEvent.bind(null, {
-                        action: "click",
-                        category: "inline-demo",
-                        label: "L3"
-                      })}
                       href="https://octolinker-demo.now.sh/sindresorhus/p-map"
                     >
                       p-map
@@ -320,11 +303,6 @@ export default function InlineDemo() {
                     <a
                       data-pjax="true"
                       className="octolinker-link"
-                      onClick={trackEvent.bind(null, {
-                        action: "click",
-                        category: "inline-demo",
-                        label: "L5"
-                      })}
                       href="https://octolinker-demo.now.sh/OctoLinker/api/blob/836b392e1fd874c2038e6e92c2a86fae8142ab06/src/go.js#LO6"
                     >
                       <div className="octospotlight-inner">
@@ -355,11 +333,6 @@ export default function InlineDemo() {
                     <a
                       data-pjax="true"
                       className="octolinker-link"
-                      onClick={trackEvent.bind(null, {
-                        action: "click",
-                        category: "inline-demo",
-                        label: "L6"
-                      })}
                       href="https://octolinker-demo.now.sh/OctoLinker/api/blob/836b392e1fd874c2038e6e92c2a86fae8142ab06/src/java/index.js"
                     >
                       ./java
@@ -387,11 +360,6 @@ export default function InlineDemo() {
                     <a
                       data-pjax="true"
                       className="octolinker-link"
-                      onClick={trackEvent.bind(null, {
-                        action: "click",
-                        category: "inline-demo",
-                        label: "L7"
-                      })}
                       href="https://octolinker-demo.now.sh/OctoLinker/api/blob/836b392e1fd874c2038e6e92c2a86fae8142ab06/src/ping.js"
                     >
                       ./ping
@@ -419,11 +387,6 @@ export default function InlineDemo() {
                     <a
                       data-pjax="true"
                       className="octolinker-link"
-                      onClick={trackEvent.bind(null, {
-                        action: "click",
-                        category: "inline-demo",
-                        label: "L8"
-                      })}
                       href="https://octolinker-demo.now.sh/OctoLinker/api/blob/836b392e1fd874c2038e6e92c2a86fae8142ab06/src/registries/index.js"
                     >
                       ./registries
@@ -459,11 +422,6 @@ export default function InlineDemo() {
                     <a
                       data-pjax="true"
                       className="octolinker-link"
-                      onClick={trackEvent.bind(null, {
-                        action: "click",
-                        category: "inline-demo",
-                        label: "L10"
-                      })}
                       href="https://octolinker-demo.now.sh/OctoLinker/api/blob/836b392e1fd874c2038e6e92c2a86fae8142ab06/src/utils/log.js"
                     >
                       ./utils/log
@@ -491,11 +449,6 @@ export default function InlineDemo() {
                     <a
                       data-pjax="true"
                       className="octolinker-link"
-                      onClick={trackEvent.bind(null, {
-                        action: "click",
-                        category: "inline-demo",
-                        label: "L11"
-                      })}
                       href="https://octolinker-demo.now.sh/OctoLinker/api/blob/836b392e1fd874c2038e6e92c2a86fae8142ab06/src/utils/cache.js"
                     >
                       ./utils/cache
@@ -523,11 +476,6 @@ export default function InlineDemo() {
                     <a
                       data-pjax="true"
                       className="octolinker-link"
-                      onClick={trackEvent.bind(null, {
-                        action: "click",
-                        category: "inline-demo",
-                        label: "L12"
-                      })}
                       href="https://octolinker-demo.now.sh/OctoLinker/api/blob/836b392e1fd874c2038e6e92c2a86fae8142ab06/src/utils/tracking.js"
                     >
                       ./utils/tracking

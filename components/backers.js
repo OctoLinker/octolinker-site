@@ -1,5 +1,3 @@
-import { trackEvent } from "../lib/analytics";
-
 export default function Backers() {
   return (
     <>
@@ -76,19 +74,9 @@ export default function Backers() {
         Please consider donations through <a
           href="https://github.com/sponsors/stefanbuck/"
           target="_blank"
-          onClick={trackEvent.bind(null, {
-            action: "click",
-            category: "button",
-            label: "github-sponsors"
-          })}
         >GitHub Sponsors</a> or <a
           href="https://opencollective.com/octolinker"
           target="_blank"
-          onClick={trackEvent.bind(null, {
-            action: "click",
-            category: "button",
-            label: "opencollective"
-          })}
         >Open Collective</a> – Thank you 🙇‍♂️
       </p>
       <div className="backers">
@@ -140,11 +128,6 @@ export default function Backers() {
         <a
           href="https://github.com/sponsors/stefanbuck/"
           target="_blank"
-          onClick={trackEvent.bind(null, {
-            action: "click",
-            category: "button",
-            label: "backers"
-          })}
         >
           <img src="static/backer.png" width="64" />
         </a>

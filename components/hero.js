@@ -2,7 +2,6 @@ import dynamic from 'next/dynamic';
 import Container from "./container";
 import Button from "./button";
 import Code from "./code";
-import { trackEvent } from "../lib/analytics";
 
 const InstallButton = dynamic(import ('./installButton'),{ssr:false});
 
@@ -78,15 +77,8 @@ export default function Nav() {
         <Code>require</Code> or <Code>import</Code> into links.
       </p>
       <p>
-        <InstallButton trackingLabel="install-hero" />
-        <Button
-          onClick={trackEvent.bind(null, {
-            action: "click",
-            category: "button",
-            label: "how-it-works"
-          })}
-          href="#how-it-works"
-        >
+        <InstallButton />
+        <Button href="#how-it-works">
           Learn how it works
         </Button>
       </p>
