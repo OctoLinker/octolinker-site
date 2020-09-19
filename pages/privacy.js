@@ -5,7 +5,7 @@ function Privacy() {
     <>
       <Container>
         <h1>Privacy Policy</h1>
-        <p>This policy was last modified on April 20, 2019.</p>
+        <p>This policy was last modified on September 19, 2020.</p>
         <p>
           This privacy policy applies to the{" "}
           <a href="https://github.com/OctoLinker/OctoLinker">
@@ -143,29 +143,34 @@ function Privacy() {
         <h2 id="technologies-we-use">Technologies we use</h2>
         <h3>Vercel</h3>
         <p>
-          We use Vercel for hosting our OctoLinker API. You can read{" "}
+          We use Vercel for hosting our OctoLinker API. See the {" "}
           <a href="https://vercel.com/legal/privacy-policy" rel="nofollow">
             Vercel's privacy terms
-          </a>
-          .
+          </a> for full details.
         </p>
         <h3>RedisGreen</h3>
         <p>
-          We use RedisGreen for . You can read{" "}
+          We use RedisGreen for . See the {" "}
           <a href="https://www.redisgreen.net/privacy.html" rel="nofollow">
             RedisGreen's privacy terms
-          </a>
-          .
+          </a> for full details.
         </p>
         <h3>Mixpanel</h3>
         <p>
           We use Mixpanel to track and analyse how users interact with our
           service. In the “What information do we collect?” section we list all
-          data that we collect.You can read{" "}
+          data that we collect.See the {" "}
           <a href="https://mixpanel.com/legal/privacy-policy/" rel="nofollow">
             Mixpanels's privacy terms
-          </a>
-          .
+          </a> for full details.
+        </p>
+        <h3>Plausible</h3>
+        <p>
+          We use Plausible to track and analyse how users interact with our
+          website. See the {" "}
+          <a href="https://plausible.io/privacy" rel="nofollow">
+          Plausible's privacy terms
+          </a> for full details.
         </p>
         <h2>How long will the data be stored</h2>
         <p>
