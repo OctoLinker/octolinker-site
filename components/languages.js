@@ -44,6 +44,7 @@ export default function Languages() {
         <LanguageBox image="static/sass.png" label="Sass" />
         <LanguageBox image="static/typescript.png" label="TypeScript" />
         <LanguageBox image="static/vim.png" label="Vim" />
+        <LanguageBox image="static/dotnet.png" label=".Net" />
       </div>
     </>
   );
