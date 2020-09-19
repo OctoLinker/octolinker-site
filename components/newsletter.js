@@ -121,7 +121,7 @@ export default class Newsletter extends React.Component {
           `}
         </style>
         <p>
-          <strong>OctoLinker is just the beginning!</strong> I have plenty other
+          <strong>OctoLinker is just the beginning!</strong> Hi, I'm <a href="https://stefanbuck.com">Stefan Buck</a> and I have plenty other
           ideas on how to improve your developer experience. Be the first to
           hear about new developer tools I'm working on.
         </p>
