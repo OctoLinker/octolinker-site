@@ -31,7 +31,7 @@ function Home() {
         <Features />
       </Container>
       <Container colored={true}>
-        <h1 id="languages">Supported languages</h1>
+        <h1 id="languages">Supported environments</h1>
         <Languages />
 
         <Container colored={false} center={true}>
