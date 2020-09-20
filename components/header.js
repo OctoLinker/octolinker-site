@@ -77,9 +77,9 @@ export default function Nav() {
                   Features
                 </span>
               </Link>
-              <Link href="/#languages">
+              <Link href="/#environments">
                 <span className="nav-item">
-                  Languages
+                  Environments
                 </span>
               </Link>
               <Link href="/#sponsors">
