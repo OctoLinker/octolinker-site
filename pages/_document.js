@@ -66,8 +66,9 @@ export default class NextSite extends Document {
               __html: plausibleSnippet
             }}
           />
-        </Head>
         <style jsx global>{``}</style>
+        <meta name="google-site-verification" content="pBgF-oOHMUunMh05Uqre2Z1LJbtOoFoCn9mikLIIOew" />
+        </Head>
         <body>
           <Main />
           <NextScript />
