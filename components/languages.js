@@ -36,6 +36,7 @@ export default function Languages() {
         <LanguageBox image="static/javascript.png" label="JavaScript" />
         <LanguageBox image="static/less.png" label="less" />
         <LanguageBox image="static/nodejs.png" label="nodejs" />
+        <LanguageBox image="static/php.png" label="PHP" />
         <LanguageBox image="static/npm.png" label="npm" />
         <LanguageBox image="static/python.png" label="python" />
         <LanguageBox image="static/ruby.png" label="Ruby" />
