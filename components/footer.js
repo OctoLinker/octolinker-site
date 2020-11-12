@@ -54,7 +54,7 @@ export default function Footer() {
           }
         `}
       </style>
-      <span>&copy; OctoLinker 2019</span>
+      <span>&copy; OctoLinker <script>document.write(new Date().getFullYear());</script></span>
       <Link href="/privacy">
         <a>Privacy</a>
       </Link>
