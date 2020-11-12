@@ -54,7 +54,7 @@ export default function Footer() {
           }
         `}
       </style>
-      <span>&copy; OctoLinker 2019</span>
+      <span>&copy; OctoLinker 2019-Present</span>
       <Link href="/privacy">
         <a>Privacy</a>
       </Link>
