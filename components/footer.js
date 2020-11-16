@@ -14,7 +14,12 @@ export default function Footer() {
           }
 
           .footer-logo {
-            margin: 20px 0 50px;
+            margin: 24px 0 50px;
+          }
+
+          .copyright {
+            display: block;
+            padding-bottom: 26px;
           }
 
           .footer a {
@@ -54,7 +59,7 @@ export default function Footer() {
           }
         `}
       </style>
-      <span>&copy; OctoLinker 2019-Present</span>
+      <span className="copyright">&copy; OctoLinker 2019-Present</span>
       <Link href="/privacy">
         <a>Privacy</a>
       </Link>
