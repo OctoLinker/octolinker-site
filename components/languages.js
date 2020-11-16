@@ -40,6 +40,7 @@ export default function Languages() {
         <LanguageBox image="static/php.png" label="PHP" />
         <LanguageBox image="static/npm.png" label="npm" />
         <LanguageBox image="static/python.png" label="python" />
+        <LanguageBox image="static/rlang.png" label="Rlang" />
         <LanguageBox image="static/ruby.png" label="Ruby" />
         <LanguageBox image="static/rubygems.png" label="RubyGems" />
         <LanguageBox image="static/rust.png" label="Rust" />
