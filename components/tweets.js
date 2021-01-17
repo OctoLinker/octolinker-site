@@ -101,22 +101,13 @@ export default function Tweets() {
           </blockquote>
         </HideOnMobile>
         <HideOnMobile>
-          <blockquote
-            className="twitter-tweet"
-            data-cards="hidden"
-            data-lang="en"
-          >
+          <blockquote className="twitter-tweet">
             <p lang="en" dir="ltr">
-              How did I go all these years without coming across{" "}
-              <a href="https://twitter.com/OctoLinker?ref_src=twsrc%5Etfw">
-                @OctoLinker
-              </a>{" "}
-              extension for GitHub? Essential.{" "}
-              <a href="https://t.co/3wT8rwaPch">https://t.co/3wT8rwaPch</a>
+              Hey people who use Javascript, Ruby, GitHub and Google Chrome: <a href="https://twitter.com/OctoLinker?ref_src=twsrc%5Etfw">@OctoLinker</a> is your friend.
             </p>
-            &mdash; Steve Wu (@stevenwu){" "}
-            <a href="https://twitter.com/stevenwu/status/1090020371619766272?ref_src=twsrc%5Etfw">
-              January 28, 2019
+            &mdash; Zeke Sikelianos (@zeke)
+            <a href="https://twitter.com/zeke/status/732087395445661696?ref_src=twsrc%5Etfw">
+              May 16, 2016
             </a>
           </blockquote>
         </HideOnMobile>
