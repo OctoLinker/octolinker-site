@@ -23,6 +23,11 @@ export default function Install({ children, compact }) {
       eventName: 'install: edge',
       text: "Install for Microsoft Edge",
       url: "https://microsoftedge.microsoft.com/addons/detail/lbbanfffjfmfdahnfbklminikafhcjjb"
+    },
+    'safari': {
+      eventName: 'install: safari',
+      text: "Install for Safari",
+      url: "https://apps.apple.com/app/octolinker/id1549308269"
     }
   };
 
