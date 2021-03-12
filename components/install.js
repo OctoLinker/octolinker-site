@@ -73,7 +73,7 @@ export default function Install() {
       </p>
       <InstallButton />
       <div className="install-count">
-        <small>Trusted by over 25,000 developers</small>
+        <small>Trusted by over 30,000 developers</small>
       </div>
     </>
   );
