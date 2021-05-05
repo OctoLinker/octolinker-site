@@ -67,7 +67,7 @@ export default function Sponsors() {
           </p>
         </div>
         <div>
-          <a href="https://redisgreen.net">
+          <a href="https://www.redisgreen.com">
             <div
               className="octofriends"
               style={{
@@ -80,7 +80,7 @@ export default function Sponsors() {
           </a>
           <p>
             We leverage{" "}
-            <a href="https://redisgreen.net">
+            <a href="https://www.redisgreen.com">
               RedisGreen
             </a>{" "}
             high performance as a caching layer to reduce network calls to
