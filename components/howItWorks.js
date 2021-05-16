@@ -58,7 +58,7 @@ export default function HowItWorks() {
           <p>
             Relative file references are resolved through the GitHub tree API in
             your browser. External dependencies are resolved using the{" "}
-            <a href="https://octolinker.now.sh/">OctoLinker API</a>.{" "}
+            <a href="https://github.com/OctoLinker/api">OctoLinker API</a>.{" "}
           </p>
           <p>
             Only the name of a dependency along with the registry type is sent
