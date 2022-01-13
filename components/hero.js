@@ -58,7 +58,7 @@ export default function Nav() {
 
           @media only screen and (min-width: 768px) {
             .hero .button {
-              margin: 20px 6px;
+              margin: 20px 6px 12px 6px;
             }
           }
         `}
@@ -82,6 +82,7 @@ export default function Nav() {
           Learn how it works
         </Button>
       </p>
+      <small>Trusted by over 30,000 developers</small>
     </div>
   );
 }
