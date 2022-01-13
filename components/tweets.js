@@ -36,23 +36,6 @@ export default function Tweets() {
           data-lang="en"
         >
           <p lang="en" dir="ltr">
-            I&#39;m generally skeptical of Chrome plugins, but OctoLinker&#39;s
-            been really handy. Makes it much easier to navigate projects on
-            GitHub.{" "}
-            <a href="https://t.co/CfZD2Awe8O">https://t.co/CfZD2Awe8O</a>
-          </p>
-          &mdash; Daniel O&#39;Connor (@_danoc)
-          <a href="https://twitter.com/_danoc/status/1093640620692783104?ref_src=twsrc%5Etfw">
-            February 7, 2019
-          </a>
-        </blockquote>
-
-        <blockquote
-          className="twitter-tweet"
-          data-cards="hidden"
-          data-lang="en"
-        >
-          <p lang="en" dir="ltr">
             OctoLinker is probably the most valuable tool I&#39;ve added to my
             developer belt in the last five years. Lowering friction to read
             open source code gives me superpowers{" "}
