@@ -15,8 +15,8 @@ function Privacy() {
           <a href="https://github.com/OctoLinker/">OctoLinker</a>. For
           simplicity we use the term OctoLinker for both, the browser extension
           and the OctoLinker API available at{" "}
-          <a href="https://octolinker.now.sh/" rel="nofollow">
-            https://octolinker.now.sh
+          <a href="https://octolinker.vercel.app/" rel="nofollow">
+            https://octolinker.vercel.app
           </a>
         </p>
         <h2>What information do we collect?</h2>

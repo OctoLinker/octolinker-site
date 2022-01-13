@@ -2,6 +2,6 @@
   "version": 2,
   "name": "octolinker-site",
   "alias": [
-    "octolinker.now.sh"
+    "octolinker.vercel.app"
   ]
 }

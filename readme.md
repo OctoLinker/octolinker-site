@@ -10,7 +10,7 @@ To get started:
 1. Clone the repository:
 
 ```bash
-git clone git@github.com:OctoLinker/octolinker.now.sh.git octolinker-website
+git clone git@github.com:OctoLinker/octolinker-site.git octolinker-site
 cd octolinker-website
 ```
 
