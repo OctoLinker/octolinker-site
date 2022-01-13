@@ -67,6 +67,14 @@ export default class NextSite extends Document {
               __html: plausibleSnippet
             }}
           />
+          <script
+            // eslint-disable-next-line react/no-danger
+            dangerouslySetInnerHTML={{
+              __html: `if ( ! window.location.hash ) {
+                history.replaceState('', document.title, window.location.pathname);
+              }`
+            }}
+          />
         <style jsx global>{``}</style>
         </Head>
         <body>
