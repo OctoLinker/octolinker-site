@@ -1,6 +1,6 @@
 # OctoLinker site
 
-Build using [next](https://github.com/zeit/next.js/) and deployed on [Vercel](https://vercel.com)
+Build using [next](https://github.com/zeit/next.js/) and deployed on [Vercel](https://vercel.com/?utm_source=octolinker&utm_campaign=oss)
 
 
 ## Contributing

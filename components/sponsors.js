@@ -44,7 +44,7 @@ export default function Sponsors() {
       <div className="sponsor-boxes">
         <div>
           <a
-            href="https://vercel.com/"
+            href="https://vercel.com/?utm_source=octolinker&utm_campaign=oss"
           >
             <div
               className="octofriends"
@@ -57,7 +57,7 @@ export default function Sponsors() {
             />
           </a>
           <p>
-            <a href="https://vercel.com/">
+            <a href="https://vercel.com/?utm_source=octolinker&utm_campaign=oss">
               Vercel
             </a>{" "}
             enables OctoLinker on demand horizontal scaling across many regions in a
