@@ -2,6 +2,7 @@ import dynamic from 'next/dynamic';
 import Container from "./container";
 import Button from "./button";
 import Code from "./code";
+import Image from 'next/image';
 
 const InstallButton = dynamic(import ('./installButton'),{ssr:false});
 
@@ -27,6 +28,13 @@ export default function Nav() {
             color: #808493;
           }
 
+          .logos {
+            display: flex;
+            gap: 12px;
+            margin-top: 18px;
+            margin-bottom: -4px;
+            justify-content: center;
+          }
           @media only screen and (min-width: 768px) {
             .hero p {
               font-size: 1.4rem;
@@ -82,6 +90,44 @@ export default function Nav() {
           Learn how it works
         </Button>
       </p>
+      <div className="logos">
+          <a
+            href="https://chrome.google.com/webstore/detail/octo-linker/jlmafbaeoofdegohdhinkhilhclaklkp"
+            onClick={function() { window.plausible("install: chrome")}}
+            rel="nofollow"
+          >
+            <Image alt="Chrome Web Store" src="/static/chrome.png" width="28" height="28" />
+          </a>
+          <a
+            href="https://addons.mozilla.org/en-US/firefox/addon/octolinker/"
+            onClick={function() { window.plausible("install: mozilla")}}
+            rel="nofollow"
+          >
+            <Image alt="Mozilla Add-ons Store" src="/static/firefox.png" width="28" height="28" />
+          </a>
+          <a
+            href="https://apps.apple.com/app/octolinker/id1549308269"
+            onClick={function() { window.plausible("install: safari")}}
+            rel="nofollow"
+          >
+            <Image alt="Mac App Store" src="/static/safari.png" width="28" height="28" />
+          </a>
+          <a
+            href="https://microsoftedge.microsoft.com/addons/detail/lbbanfffjfmfdahnfbklminikafhcjjb"
+            onClick={function() { window.plausible("install: edge")}}
+            rel="nofollow"
+          >
+            <Image alt="Microsoft Store" src="/static/edge.png" width="28" height="28" />
+          </a>
+          <a
+            href="https://addons.opera.com/en/extensions/details/octolinker/"
+            onClick={function() { window.plausible("install: opera")}}
+            rel="nofollow"
+          >
+            <Image alt="Opera Add-ons Store" src="/static/opera.png" width="28" height="28" />
+          </a>
+        </div>
+
       <small>Trusted by over 30,000 developers</small>
     </div>
   );

@@ -1,7 +1,6 @@
 import Container from "../components/container";
 import Hero from "../components/hero";
 import Install from "../components/install";
-import Backers from "../components/backers";
 import Sponsors from "../components/sponsors";
 import Tweets from "../components/tweets";
 import Languages from "../components/languages";
@@ -33,13 +32,6 @@ function Home() {
       <Container colored={true}>
         <h1 id="environments">Supported environments</h1>
         <Languages />
-
-        <Container colored={false} center={true}>
-
-        <h1>OctoLinker is just the beginning!</h1>
-        <Newsletter />
-
-      </Container>
       </Container>
       <Container>
         <Mascot src="static/mascot-baby.png" width="123" />
@@ -47,12 +39,12 @@ function Home() {
         <Tweets />
       </Container>
       <Container colored={true} center={true}>
-        <h1>Backers</h1>
-        <Backers />
-      </Container>
-      <Container>
         <h1 id="sponsors">Sponsors</h1>
         <Sponsors />
+      </Container>
+      <Container center={true}>
+      <h1>OctoLinker is just the beginning!</h1>
+        <Newsletter />
       </Container>
       <Container colored={true} center={true}>
         <h1>Install OctoLinker</h1>
