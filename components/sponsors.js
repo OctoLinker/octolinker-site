@@ -67,12 +67,12 @@ export default function Sponsors() {
           </p>
         </div>
         <div>
-          <a href="https://www.redisgreen.com">
+          <a href="https://www.memetria.com">
             <div
               className="octofriends"
               style={{
                 backgroundColor: "#5f8834",
-                backgroundImage: "url(static/redisgreen.png)",
+                backgroundImage: "url(static/memetria.png)",
                 backgroundPositionY: "53%",
                 backgroundSize: "80%"
               }}
@@ -80,8 +80,8 @@ export default function Sponsors() {
           </a>
           <p>
             We leverage{" "}
-            <a href="https://www.redisgreen.com">
-              RedisGreen
+            <a href="https://www.memetria.com">
+              Memetria
             </a>{" "}
             high performance as a caching layer to reduce network calls to
             third-party providers such as <Code>npmjs.com</Code>,{" "}
