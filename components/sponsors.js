@@ -71,7 +71,7 @@ export default function Sponsors() {
             <div
               className="octofriends"
               style={{
-                backgroundColor: "#5f8834",
+                backgroundColor: "#fff",
                 backgroundImage: "url(static/memetria.png)",
                 backgroundPositionY: "53%",
                 backgroundSize: "80%"
