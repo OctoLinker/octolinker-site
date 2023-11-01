@@ -46,9 +46,6 @@ export default function Screenshot() {
           <InlineDemo />
         </HideOnMobile>
       </div>
-      <p className="live-demo">
-        Check out our <a href="https://octolinker-demo.now.sh/">live demo</a>, right in your browser, no install required!
-      </p>
     </>
   );
 }
