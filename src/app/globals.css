@@ -19,3 +19,10 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+.bg-octolinker-900 { background-color: #fd4eff; }
+.bg-octolinker-200 { background-color: #fbcbfc; }
+
+.text-octolinker-900 {
+  color: #fd4eff;
+}

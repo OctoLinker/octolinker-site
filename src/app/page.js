@@ -32,6 +32,85 @@ export default function Home() {
       value: '40+',
       label: 'Contributors',
       color: 'bg-green-500'
+    },
+    {
+      icon: Rocket,
+      value: '9 years',
+      label: 'Active development',
+      color: 'bg-green-500'
+    }
+  ];
+
+  const timelineEvents = [
+    {
+      date: 'Dec. 2013',
+      title: 'Initial Launch',
+      content: 'Stefan Buck created the original GitHub Linker Chrome extension'
+    },
+    {
+      date: 'Mar. 2015',
+      title: 'Social Media Launch',
+      content: 'OctoLinker officially joined Twitter platform'
+    },
+    {
+      date: 'Aug. 24, 2015',
+      title: 'Live Resolver Implementation',
+      content: 'Implemented real-time package resolver API with v3.8.0'
+    },
+    {
+      date: 'Aug. 27, 2015',
+      title: 'Installation Milestone',
+      content: 'Reached 6,000 installations milestone'
+    },
+    {
+      date: 'Dec. 8, 2015',
+      title: 'Rebranding',
+      content: 'Due to legal issues, project renamed from GitHub Linker to OctoLinker through community vote'
+    },
+    {
+      date: 'June 21, 2016',
+      title: 'Firefox Launch',
+      content: 'OctoLinker became available for Firefox browsers'
+    },
+    {
+      date: 'Sept. 1, 2016',
+      title: 'Major Milestone',
+      content: 'Reached 10,000 active users'
+    },
+    {
+      date: 'Dec. 2017',
+      title: 'Java Support',
+      content: 'Added comprehensive Java support including Spring, slf4j, Jackson, JUnit, Mockito and Hamcrest'
+    },
+    {
+      date: 'July 2018',
+      title: 'Privacy Update',
+      content: 'Removed client-side tracking to enhance user privacy'
+    },
+    {
+      date: 'Aug. 2019',
+      title: 'Deno Support',
+      content: 'Released v5.1 with support for Deno imports'
+    },
+    {
+      date: 'Jan. 2020',
+      title: 'Microsoft Edge Support',
+      content: 'OctoLinker became available on Microsoft Edge'
+    },
+    {
+      date: 'Apr. 2022',
+      title: 'Chrome Recognition',
+      content: 'Received the Established Publisher badge on the Chrome Web Store'
+    },
+    {
+      date: 'May 8, 2023',
+      title: 'Major Challenge',
+      content: "GitHub's new code view implementation made code injection via browser extension significantly more difficult"
+    },
+    {
+      date: 'Oct. 27, 2023',
+      title: 'Latest Development',
+      content: 'Stefan Buck working on solution to provide information directly on GitHub repositories without requiring internal developer portals'
     }
   ];
 
@@ -39,16 +118,6 @@ export default function Home() {
   return (
     <div>
       <Head>
-        <style>
-          {`
-.bg-octolinker-900 { background-color: #fd4eff; }
-.bg-octolinker-200 { background-color: #fbcbfc; }
-
-.text-octolinker-900 {
-  color: #fd4eff;
-}
-`}
-        </style>
         <title>{seoTitle}</title>
         <meta name='twitter:title' content={seoTitle} />
         <meta
@@ -63,69 +132,98 @@ export default function Home() {
         />
       </Head>
 
-
-
-      <section className="hero container max-w-screen-lg mx-auto pb-4 grid justify-center">
-        <Image className='mx-auto' src="/octolinker.png" width={325 / 2} height={303 / 2} />
-      </section>
-
-      <section className="hero container max-w-screen-lg mx-auto pb-10 grid justify-center text-center">
-        <div className="text-6xl">
+      <section className="container max-w-screen-lg mx-auto pb-12 pt-12 grid justify-center text-center">
+        <Image className='mx-auto pb-2' src="/octolinker.png" alt="OctoLinker logo" width={325 / 2} height={303 / 2} />
+        <div className="text-7xl">
           <strong>OctoLinker</strong>
         </div>
-        <div>
+        <div className="text-lg">
           Revolutionizing GitHub Navigation for 9 Years
         </div>
       </section>
 
-      <Image className='mx-auto max-w-screen-md' src="/screenshot.png" width={1743} height={1165} />
+      <section className="container max-w-screen-lg mx-auto pb-4 grid justify-center">
+        <div className=" w-full rounded-3xl backdrop-blur-md bg-white/30 border sm:p-5 drop-shadow-lg">
+          <div className="rounded-2xl bg-white h-full drop-shadow-md border-2 border-gray-100 overflow-hidden">
+            <Image className='mx-auto max-w-screen-md' src="/screenshot.png" alt="OctoLinker screenshot" width={1780} height={1169} />
+          </div>
+        </div>
+      </section>
 
-      <div className="min-h-screen bg-white">
-        <div className="relative py-20 px-4 bg-gradient-to-b to-blue-50 from-white">
-          <div className="relative max-w-5xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-screen-md mx-auto">
-              {stats.map((stat, index) => (
-                <div
-                  key={index}
-                  className="border bg-gradient-to-b from-blue-50 to-white rounded-lg p-6 shadow-sm"
-                >
-                  <div className="flex flex-col items-center text-center space-y-2">
-                    <stat.icon className="w-8 h-8" />
-                    <span className="text-3xl font-bold">{stat.value}</span>
-                    <span className="text-sm">{stat.label}</span>
-                  </div>
+      <div className="bg-white">
+        <div className="relative py-20 px-4 bg-gradient-to-b to-blue-100 from-white">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-screen-md mx-auto">
+            {stats.map((stat, index) => (
+              <div
+                key={index}
+                className="border bg-gradient-to-b from-blue-50 to-white rounded-lg p-6 shadow-sm"
+              >
+                <div className="flex flex-col items-center text-center space-y-2">
+                  <stat.icon className="w-8 h-8" />
+                  <span className="text-2xl font-bold">{stat.value}</span>
+                  <span className="text-sm">{stat.label}</span>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
           </div>
         </div>
 
-        <div className="max-w-3xl mx-auto mb-24">
+        <div className="pt-6 bg-gradient-to-b from-blue-100 to-white">
+
+          <div className="mb-12">
+            <Image className='mx-auto' src="/mascot-down.png" alt="OctoLinker down" width={410 / 2} height={210 / 2} />
+          </div>
+        </div>
+        <div className="max-w-3xl mx-auto">
+
           <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical timeline-centered">
-            <li>
-              <div className="timeline-middle h-16">
-                <span className="bg-error/20 flex size-8 items-center justify-center rounded-full">
-                  <span className="icon-[tabler--file] text-error size-5"></span>
-                </span>
-              </div>
-              <div className="timeline-start me-4 mt-8 max-md:pt-2">
-                <div className="text-base-content/50 text-sm font-normal">2 month’s ago</div>
-              </div>
-              <div className="timeline-end ms-4 mb-8">
-                <div className="card">
-                  <div className="card-body gap-4">
-                    <h5 className="card-title text-lg">You've uploaded doc pdf to the Flyon</h5>
-                    <p>
-                      The process of recording the key project details and producing the documents that are required to implement
-                      it successfully. Simply put, it's an umbrella term which includes all the documents created over the course
-                      of the project.
-                    </p>
-               
+
+            {timelineEvents.map((item, index) => {
+
+              const isOdd = index % 2;
+
+              const classNames2 = cn('me-4 mt-2 max-md:pt-2', {
+                'timeline-start': isOdd,
+                'timeline-end': !isOdd,
+              })
+              const classNames3 = cn('ms-4 mb-8', {
+                'timeline-start': !isOdd,
+                'timeline-end': isOdd,
+              })
+
+
+
+              return (
+                <li key={index} className={cn({
+                  'timeline-shift': !isOdd
+                })}>
+                  <div className="timeline-middle h-4">
+                    <span className="bg-octolinker-900  flex size-4 items-center justify-center rounded-full"></span>
                   </div>
-                </div>
-              </div>
-              <hr />
-            </li>
+                  <div className={classNames2}>
+                    <div className="text-sm font-normal text-gray-400">{item.date}</div>
+                  </div>
+                  <div className={classNames3}>
+                    <div className="card">
+                      <div className="card-body gap-4">
+                        <h5 className="card-title text-lg">{item.title}</h5>
+                        {item.content}
+                      </div>
+                    </div>
+                  </div>
+                  <hr />
+                </li>
+              )
+            })}
+          </ul>
+
+          <div className="mt-8">
+            <Image className='mx-auto' src="/mascot-tentacle.png" alt="OctoLinker Good bye" width={316 / 2} height={202 / 2} />
+          </div>
+
+
+          <ul className="mt-24 timeline timeline-snap-icon max-md:timeline-compact timeline-vertical timeline-centered">
+
             <li className="timeline-shift">
               <div className="timeline-middle h-16">
                 <span className="bg-success/20 flex size-8 items-center justify-center rounded-full">
@@ -310,6 +408,8 @@ export default function Home() {
               <hr />
             </li>
           </ul>
+
+
         </div>
 
       </div>
