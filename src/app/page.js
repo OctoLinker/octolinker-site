@@ -41,78 +41,191 @@ export default function Home() {
     }
   ];
 
+
   const timelineEvents = [
     {
-      date: 'Dec. 2013',
-      title: 'Initial Launch',
-      content: 'Stefan Buck created the original GitHub Linker Chrome extension'
+      "date": "2013-12-27",
+      "title": "Initial release",
+      "content": (
+        <div>
+          <p>OctoLinker was <strong>initially released</strong> as 'GitHub Linker' on <a href="https://github.com/OctoLinker/OctoLinker/commit/151569f62beb450520c01f701172a8efbd951c98">December 27, 2013</a>.
+          </p>
+          <p>It linked dependencies in a <code>package.json</code> to the relevaant GitHub repository.
+
+            At launch, it supported <strong>44,930 npm packages</strong> (nearly all of the available packages at the time). Yes, the npm registry was that small back then!</p>
+        </div>
+      )
     },
     {
-      date: 'Mar. 2015',
-      title: 'Social Media Launch',
-      content: 'OctoLinker officially joined Twitter platform'
+      "date": "2014-06-16",
+      "title": "Link require statements",
+      "content": (
+        <div>
+          Added support for linking <code>require()</code> statements to their related files or corresponding GitHub repositories, enabling users to explore packages directly from the source code.
+        </div>
+      )
     },
     {
-      date: 'Aug. 24, 2015',
-      title: 'Live Resolver Implementation',
-      content: 'Implemented real-time package resolver API with v3.8.0'
+      "date": "2014-08-24",
+      "title": "Improve cralwer",
+      "content": (
+        <div>
+          As the npm registry grew, so did the mapping file. By <strong>August 24, 2014</strong>, it contained <strong>over 75,000 npm packages</strong>. Crawling npm became increasingly challenging, and generating the file entirely in memory was no longer feasible. The solution? Streaming.
+        </div>
+      )
     },
     {
-      date: 'Aug. 27, 2015',
-      title: 'Installation Milestone',
-      content: 'Reached 6,000 installations milestone'
+      "date": "2014-09-25",
+      "title": "PHP Compsoer support",
+      "content": (
+        <>
+          <div>
+            This marked the first code contribution to the project, adding support for a new package manager, made by <a href="https://github.com/barryvdh">barryvdh</a>
+          </div>
+          <Image src="/composer.png" width={60} height={348}></Image>
+        </>
+      )
     },
     {
-      date: 'Dec. 8, 2015',
-      title: 'Rebranding',
-      content: 'Due to legal issues, project renamed from GitHub Linker to OctoLinker through community vote'
+      "date": "2015-08-24",
+      "title": "Real-time package resolution",
+      "content": (
+        <div>Introduced real-time package resolution.</div>)
     },
     {
-      date: 'June 21, 2016',
-      title: 'Firefox Launch',
-      content: 'OctoLinker became available for Firefox browsers'
+      "date": "2015-12-09",
+      "title": "Renaming to OctoLinker",
+      "content": (
+        <div>Forced to rename 'GitHub Linker' due to legal reasons—OctoLinker was born!</div>)
     },
     {
-      date: 'Sept. 1, 2016',
-      title: 'Major Milestone',
-      content: 'Reached 10,000 active users'
+      "date": "2016-04-07",
+      "title": "RubyGems support added",
+      "content": (
+        <div>Added support for RubyGems.</div>)
     },
     {
-      date: 'Dec. 2017',
-      title: 'Java Support',
-      content: 'Added comprehensive Java support including Spring, slf4j, Jackson, JUnit, Mockito and Hamcrest'
+      "date": "2016-05-12",
+      "title": "npm dependencies support",
+      "content": (
+        <div>Added support for npm dependencies.</div>)
     },
     {
-      date: 'July 2018',
-      title: 'Privacy Update',
-      content: 'Removed client-side tracking to enhance user privacy'
+      "date": "2016-05-25",
+      "title": "Homebrew formulae support",
+      "content": (
+        <div>Added support for Homebrew formulae navigation.</div>)
     },
     {
-      date: 'Aug. 2019',
-      title: 'Deno Support',
-      content: 'Released v5.1 with support for Deno imports'
+      "date": "2016-06-21",
+      "title": "Firefox release",
+      "content": (
+        <div>Released OctoLinker for Firefox.</div>)
     },
     {
-      date: 'Jan. 2020',
-      title: 'Microsoft Edge Support',
-      content: 'OctoLinker became available on Microsoft Edge'
+      "date": "2016-08-02",
+      "title": "TypeScript support",
+      "content": (
+        <div>Added support for TypeScript definition paths.</div>)
     },
     {
-      date: 'Apr. 2022',
-      title: 'Chrome Recognition',
-      content: 'Received the Established Publisher badge on the Chrome Web Store'
+      "date": "2016-09-01",
+      "title": "10,000 active users",
+      "content": (
+        <div>OctoLinker reached 10,000 active users.</div>)
     },
     {
-      date: 'May 8, 2023',
-      title: 'Major Challenge',
-      content: "GitHub's new code view implementation made code injection via browser extension significantly more difficult"
+      "date": "2016-10-19",
+      "title": ".NET Core support",
+      "content": (
+        <div>Added support for .NET Core project.json file.</div>)
     },
     {
-      date: 'Oct. 27, 2023',
-      title: 'Latest Development',
-      content: 'Stefan Buck working on solution to provide information directly on GitHub repositories without requiring internal developer portals'
+      "date": "2017-01-31",
+      "title": "Go dependencies support",
+      "content": (
+        <div>Added support for Go dependencies.</div>)
+    },
+    {
+      "date": "2017-03-10",
+      "title": "CSS & HTML imports",
+      "content": (
+        <div>Added support for CSS @import and HTML imports.</div>)
+    },
+    {
+      "date": "2017-03-28",
+      "title": "More language support",
+      "content": (
+        <div>Added support for Haskell, Sass, and LessCSS.</div>)
+    },
+    {
+      "date": "2017-11-09",
+      "title": "Java support",
+      "content": (
+        <div>Added Java core class linking, including documentation support.</div>)
+    },
+    {
+      "date": "2018-08-13",
+      "title": "Dependency linking in PRs",
+      "content": (
+        <div>v4.20.0 released—linked npm, Bower, and Composer dependencies in Pull Requests.</div>)
+    },
+    {
+      "date": "2019-06-06",
+      "title": "Major rework of link resolution",
+      "content": (
+        <div>Major rework of link resolution, making navigation faster.</div>)
+    },
+    {
+      "date": "2019-12-27",
+      "title": "6-year anniversary",
+      "content": (
+        <div>Celebrated 6 years—25,000 active users & 4,000 GitHub stars.</div>)
+    },
+    {
+      "date": "2020-04-12",
+      "title": "Hovercards added",
+      "content": (
+        <div>OctoLinker v6.3 added hovercards for dependency insights.</div>)
+    },
+    {
+      "date": "2020-08-19",
+      "title": "GitHub Actions support",
+      "content": (
+        <div>OctoLinker v6.5.0 released—added more GitHub Actions support and better notifications.</div>)
+    },
+    {
+      "date": "2021-01-17",
+      "title": "New core contributor",
+      "content": (
+        <div>@fregante joined as a core contributor.</div>)
+    },
+    {
+      "date": "2021-04-29",
+      "title": "GitHub Archive Project feature",
+      "content": (
+        <div>OctoLinker selected as one of the '17,000 Greatest Hits' for the GitHub Archive Project.</div>)
+    },
+    {
+      "date": "2022-01-07",
+      "title": "Firefox issue fixed",
+      "content": (
+        <div>Fixed critical issue affecting OctoLinker for Firefox.</div>)
+    },
+    {
+      "date": "2022-04-26",
+      "title": "Chrome Web Store badge",
+      "content": (
+        <div>Received 'Established Publisher' badge on Chrome Web Store.</div>)
+    },
+    {
+      "date": "2023-05-08",
+      "title": "GitHub navigation changes",
+      "content": (
+        <div>GitHub’s new code navigation affected OctoLinker, raising concerns over its future.</div>)
     }
-  ];
+  ]
+
 
 
   return (
