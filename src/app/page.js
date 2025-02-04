@@ -48,11 +48,9 @@ export default function Home() {
       "title": "Initial release",
       "content": (
         <div>
-          <p>OctoLinker was <strong>initially released</strong> as 'GitHub Linker' on <a href="https://github.com/OctoLinker/OctoLinker/commit/151569f62beb450520c01f701172a8efbd951c98">December 27, 2013</a>.
+          <p>OctoLinker was <strong>initially released</strong> as GitHub Linker.
           </p>
-          <p>It linked dependencies in a <code>package.json</code> to the relevaant GitHub repository.
-
-            At launch, it supported <strong>44,930 npm packages</strong> (nearly all of the available packages at the time). Yes, the npm registry was that small back then!</p>
+          <p>At launch, it just linked dependencies in a <code>package.json</code>. It supported <strong>44,930 npm packages</strong> (nearly all of the available packages at the time). Yes, the npm registry was that small back then!</p>
         </div>
       )
     },
@@ -67,21 +65,23 @@ export default function Home() {
     },
     {
       "date": "2014-08-24",
-      "title": "Improve cralwer",
+      "title": "Optimize mapping file creation",
       "content": (
         <div>
-          As the npm registry grew, so did the mapping file. By <strong>August 24, 2014</strong>, it contained <strong>over 75,000 npm packages</strong>. Crawling npm became increasingly challenging, and generating the file entirely in memory was no longer feasible. The solution? Streaming.
+          As the npm registry grew, so did the mapping file. By now it contained <strong>over 75,000 npm packages</strong>. Crawling npm became increasingly challenging, and generating the file entirely in memory was no longer feasible. The solution? Streaming.
         </div>
       )
     },
     {
       "date": "2014-09-25",
-      "title": "PHP Compsoer support",
-      "logo": (<Image src="/composer.png" width={263} height={348} alt="Composer logo"></Image>),
+      "title": "PHP Composer support",
+      "logos": [
+        { src: "/composer.png", alt: "Composer logo" },
+      ],
       "content": (
-        <>
-          This marked the first code contribution to the project, adding support for a new package manager, made by <a href="https://github.com/barryvdh">barryvdh</a>
-        </>
+        <p>
+          This was the project's first code contribution, introducing support for a new package manager, made by <a rel="noopener noreferrer" href="https://github.com/barryvdh">@barryvdh</a>.
+        </p>
       )
     },
     {
@@ -89,37 +89,36 @@ export default function Home() {
       "title": "Live-Resolver API",
       "badge": "Huge improvment",
       "content": (
-        <>
-          Earlier versions relied on large static lists for each supported registry bundled with the extension. This approach was not scalable and as it also impacted the browser performance. The new Live-Resolver API was introduced to resolve package links in real-time, ensuring up-to-date links and improved performance. This change also paved the way for future support of languages like Python, Ruby, and Go.
-        </>)
+        <p>
+          Earlier versions relied on large static lists for each supported registry bundled with the extension. This approach was not scalable and as it also impacted the browser performance. The new <strong>Live-Resolver API</strong> was introduced to resolve package links in real-time, ensuring up-to-date links and improved performance. This change also paved the way for future support of languages like Python, Ruby, and Go.
+        </p>)
     },
     {
       "date": "2015-08-27",
-      "title": "6000 user",
+      "title": "New user record",
       "content": (
         <>
-          Passed 6000 users
+          Surpassed 6,000 users after 1.5 years
         </>)
     },
     {
       "date": "2015-12-09",
       "title": "Renaming to OctoLinker",
+      "image": { src: "/octolinker.png", alt: "OctoLinker logo" },
       "content": (
-        <>Forced to rename 'GitHub Linker' due to legal reasons, OctoLinker was born. Thanks Christian Kahl for this amazing logo!
-          <Image src="/octolinker.png" alt="OctoLinker logo" width={976} height={910}></Image>
-        </>
+        <p>Forced to rename 'GitHub Linker' due to legal reasons, <strong>OctoLinker was born.</strong> Thanks Christian Kahl for this amazing logo!</p>
       )
     },
     {
       "date": "2016-04-07",
       "title": "Support for RubyGems",
-      "logo": (<Image src="/rubygems.png" alt="rubygems logo" width={520} height={595}></Image>),
+      "logos": [{ src: "/rubygems.png", alt: "rubygems logo" }],
       "content": ""
     },
     {
       "date": "2016-05-11",
       "title": "Support for Ruby",
-      "logo": (<Image src="/ruby.png" alt="Ruby logo" width={520} height={522}></Image>),
+      "logos": [{ src: "/ruby.png", alt: "Ruby logo" }],
       "content": (<p>OctoLinker supports now Ruby<code>require</code> statements</p>)
     },
     {
@@ -128,24 +127,23 @@ export default function Home() {
     },
     {
       "date": "2016-05-25",
-      "title": "Homebrew formulae support",
-      "logo": (<Image src="/homebrew.png" alt="Homebrew logo" width={198} height={158}></Image>),
+      "title": "Homebrew formular support",
+      "logos": [{ src: "/homebrew.png", alt: "Homebrew logo" }],
       "content": (
-        <div>Added support for Homebrew formulae navigation.</div>)
+        <div>Added support for Homebrew formular navigation.</div>)
     },
     {
       "date": "2016-06-21",
       "title": "Firefox release",
-      "content": (
-        <div>
-          <Image src="/octolinker-firefox.jpg" alt="Firefox logo" width={950} height={800}></Image>
-
-        </div>)
+      "image": { src: "/octolinker-firefox.jpg", alt: "Firefox logo" },
+      "content": "OctoLinker is now available for Firefox."
     },
     {
       "date": "2016-08-02",
       "title": "TypeScript support",
-      "logo": (<Image src="/typescript.png" alt="Typescript logo" width={520} height={520}></Image>),
+      "logos": [{
+        src: "/typescript.png", alt: "Typescript logo"
+      }],
       "content": (
         <div>Added support for TypeScript definition paths.</div>)
     },
@@ -189,7 +187,7 @@ export default function Home() {
     {
       "date": "2017-01-31",
       "title": "Go dependencies support",
-      "logo": (<Image src="/go.png" alt="GO logo" width={200} height={200}></Image>),
+      "logos": [{ src: "/go.png", alt: "GO logo" }],
       "content": (
         <div>Added support for Go</div>)
     },
@@ -207,7 +205,7 @@ export default function Home() {
     {
       "date": "2017-11-09",
       "title": "Java support",
-      "logo": (<Image src="/java.png" alt="java logo" width={200} height={200}></Image>),
+      "logos": [{ src: "/java.png", alt: "java logo" }],
       "content": (
         <div>Added Java core class linking, including documentation support.</div>)
     },
@@ -319,8 +317,8 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-white">
-        <div className="relative py-20 px-4 bg-gradient-to-b to-blue-100 from-white">
+      <div className="bg-white ">
+        {/* <div className="relative py-20 px-4 bg-gradient-to-b to-blue-100 from-white">
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 max-w-screen-md mx-auto">
             {stats.map((stat, index) => (
               <div
@@ -335,15 +333,15 @@ export default function Home() {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
 
-        <div className="pt-6 bg-gradient-to-b from-blue-100 to-white">
+        {/* <div className="pt-6 bg-gradient-to-b from-blue-100 to-white "> */}
 
-          <div className="mb-12">
-            <Image className='mx-auto' src="/mascot-down.png" alt="OctoLinker down" width={410 / 2} height={210 / 2} />
-          </div>
+        <div className="mt-12 mb-12">
+          <Image className='mx-auto' src="/mascot-down.png" alt="OctoLinker down" width={410 / 2} height={210 / 2} />
         </div>
-        <div className="max-w-3xl mx-auto">
+        {/* </div> */}
+        <div className="max-w-5xl mx-auto">
 
           <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical timeline-centered">
 
@@ -351,11 +349,12 @@ export default function Home() {
 
               const isOdd = index % 2;
 
-              const classNames2 = cn('me-4 mt-2 max-md:pt-2', {
+              const classNames2 = cn('hidden md:block', {
                 'timeline-start': isOdd,
                 'timeline-end': !isOdd,
               })
-              const classNames3 = cn('ms-4 mb-8', {
+              const classNames3 = cn('mb-8', {
+                'md:-mt-10': index !== 0,
                 'timeline-start': !isOdd,
                 'timeline-end': isOdd,
               })
@@ -370,21 +369,43 @@ export default function Home() {
                 )
                 item.logo = (
                   <a href={`https://github.com/${item.new_contributor}`} rel="noopener noreferrer">
-                    <img src={`http://github.com/${item.new_contributor}.png`} width={300} height={300} alt="" />
+                    <img src={`http://github.com/${item.new_contributor}.png`} width={80} height={80} className="rounded" alt="" />
                   </a>)
               }
 
+              if (item.logos) {
+
+                item.images = (<div className="logos flex flex-wrap gap-3">
+                  {item.logos.map((logo, index) => {
+                    return (
+                      <div key={index} className="size-16 relative">
+                        <Image src={logo.src} alt={logo.alt} className="w-16 rounded" layout={'fill'} objectFit={'contain'} />
+                      </div>
+                    )
+                  })}
+                </div>)
+              }
+
+              if (item.image) {
+                item.images = (
+                  <div className="relative size-48 md:size-64 md:mx-auto">
+                    <Image src={item.image.src} alt={item.image.alt} layout={'fill'} objectFit={'contain'}></Image>
+                  </div>
+                )
+              }
 
 
               return (
-                <li key={index} className={cn({
-                  'timeline-shift': !isOdd
-                })}>
-                  <div className="timeline-middle h-4">
-                    <span className="bg-octolinker-900  flex size-4 items-center justify-center rounded-full"></span>
+                <li key={index}>
+                  <div className="timeline-middle h-0 relative z-0">
+                    <span className="bg-octolinker-900  flex size-5 items-center justify-center rounded-full border-white border-4 relative z-10"></span>
                   </div>
                   <div className={classNames2}>
-                    <div className="text-sm font-normal text-gray-400">{item.date}</div>
+                    <div className="text-sm font-normal text-gray-400 -mt-2">{new Date(item.date).toLocaleDateString("en-GB", {
+                      day: "numeric",
+                      month: "long",
+                      year: "numeric"
+                    })}</div>
                   </div>
                   <div className={classNames3}>
                     <div className="card">
@@ -392,11 +413,11 @@ export default function Home() {
                         {item.badge && <span className="badge badge-primary">{item.badge}</span>}
                         <h5 className="card-title text-lg">{item.title}</h5>
                         {item.content}
-                        {item.logo && (<div className="logos flex flex-wrap gap-4">{item.logo}</div>)}
+                        {item.images}
                       </div>
                     </div>
                   </div>
-                  <hr />
+                  <hr className="border-4 bg-octolinker-100" />
                 </li>
               )
             })}
@@ -426,8 +447,7 @@ export default function Home() {
                       In the Select Image for Project dialog box, choose one of the following: Under the Upload New Image section
                     </p>
                     <div className="flex flex-wrap gap-4">
-                      <img src="/javascript.png" alt="" className="w-16 rounded" />
-                      <img src="/composer.png" alt="" className="w-16 rounded" />
+
                     </div>
                   </div>
                 </div>
@@ -598,6 +618,6 @@ export default function Home() {
         </div>
 
       </div>
-    </div>
+    </div >
   )
 }

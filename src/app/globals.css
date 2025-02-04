@@ -33,7 +33,7 @@ body {
 }
 .timeline p {
   line-height: 1.6rem;;
-  padding-top: 1.2rem;
+  padding-top: 0.8rem;
 }
 .timeline p:first-child {
   padding-top: 0;
@@ -47,10 +47,7 @@ code {
   border: 1px solid #eaeaea;
 }
 
-.logos img {
-  width: 40px;
-  height: 40px;
-}
+
 
 .timeline strong {
   margin: 0 -0.2rem;
@@ -60,8 +57,8 @@ code {
   background-image: linear-gradient(
     to right,
     #ffe1001a,
-    #ffe100b3 6%,
-    #ffe10054
+    #ffe10048 6%,
+    #ffe10034
   );
   box-decoration-break: clone;
 }
