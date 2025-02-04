@@ -22,6 +22,7 @@ body {
 
 .bg-octolinker-900 { background-color: #fd4eff; }
 .bg-octolinker-200 { background-color: #fbcbfc; }
+.bg-octolinker-100 { background-color: #fbe6fc; }
 
 .text-octolinker-900 {
   color: #fd4eff;
@@ -36,4 +37,31 @@ body {
 }
 .timeline p:first-child {
   padding-top: 0;
+}
+
+code {
+  background-color: #f3f3f3;
+  padding: 0.15rem 0.3rem;
+  border-radius: 0.3rem;
+  font-size: 0.85rem;
+  border: 1px solid #eaeaea;
+}
+
+.logos img {
+  width: 40px;
+  height: 40px;
+}
+
+.timeline strong {
+  margin: 0 -0.2rem;
+  padding: 0.1rem 0.4rem;
+  border-radius: 0.8rem 0.3rem;
+  background: transparent;
+  background-image: linear-gradient(
+    to right,
+    #ffe1001a,
+    #ffe100b3 6%,
+    #ffe10054
+  );
+  box-decoration-break: clone;
 }

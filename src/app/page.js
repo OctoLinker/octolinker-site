@@ -77,42 +77,59 @@ export default function Home() {
     {
       "date": "2014-09-25",
       "title": "PHP Compsoer support",
+      "logo": (<Image src="/composer.png" width={263} height={348} alt="Composer logo"></Image>),
       "content": (
         <>
-          <div>
-            This marked the first code contribution to the project, adding support for a new package manager, made by <a href="https://github.com/barryvdh">barryvdh</a>
-          </div>
-          <Image src="/composer.png" width={60} height={348}></Image>
+          This marked the first code contribution to the project, adding support for a new package manager, made by <a href="https://github.com/barryvdh">barryvdh</a>
         </>
       )
     },
     {
       "date": "2015-08-24",
-      "title": "Real-time package resolution",
+      "title": "Live-Resolver API",
+      "badge": "Huge improvment",
       "content": (
-        <div>Introduced real-time package resolution.</div>)
+        <>
+          Earlier versions relied on large static lists for each supported registry bundled with the extension. This approach was not scalable and as it also impacted the browser performance. The new Live-Resolver API was introduced to resolve package links in real-time, ensuring up-to-date links and improved performance. This change also paved the way for future support of languages like Python, Ruby, and Go.
+        </>)
+    },
+    {
+      "date": "2015-08-27",
+      "title": "6000 user",
+      "content": (
+        <>
+          Passed 6000 users
+        </>)
     },
     {
       "date": "2015-12-09",
       "title": "Renaming to OctoLinker",
       "content": (
-        <div>Forced to rename 'GitHub Linker' due to legal reasons—OctoLinker was born!</div>)
+        <>Forced to rename 'GitHub Linker' due to legal reasons, OctoLinker was born. Thanks Christian Kahl for this amazing logo!
+          <Image src="/octolinker.png" alt="OctoLinker logo" width={976} height={910}></Image>
+        </>
+      )
     },
     {
       "date": "2016-04-07",
-      "title": "RubyGems support added",
-      "content": (
-        <div>Added support for RubyGems.</div>)
+      "title": "Support for RubyGems",
+      "logo": (<Image src="/rubygems.png" alt="rubygems logo" width={520} height={595}></Image>),
+      "content": ""
     },
     {
-      "date": "2016-05-12",
-      "title": "npm dependencies support",
-      "content": (
-        <div>Added support for npm dependencies.</div>)
+      "date": "2016-05-11",
+      "title": "Support for Ruby",
+      "logo": (<Image src="/ruby.png" alt="Ruby logo" width={520} height={522}></Image>),
+      "content": (<p>OctoLinker supports now Ruby<code>require</code> statements</p>)
+    },
+    {
+      "date": "2016-05-15",
+      "new_contributor": "josephfrazier"
     },
     {
       "date": "2016-05-25",
       "title": "Homebrew formulae support",
+      "logo": (<Image src="/homebrew.png" alt="Homebrew logo" width={198} height={158}></Image>),
       "content": (
         <div>Added support for Homebrew formulae navigation.</div>)
     },
@@ -120,47 +137,77 @@ export default function Home() {
       "date": "2016-06-21",
       "title": "Firefox release",
       "content": (
-        <div>Released OctoLinker for Firefox.</div>)
+        <div>
+          <Image src="/octolinker-firefox.jpg" alt="Firefox logo" width={950} height={800}></Image>
+
+        </div>)
     },
     {
       "date": "2016-08-02",
       "title": "TypeScript support",
+      "logo": (<Image src="/typescript.png" alt="Typescript logo" width={520} height={520}></Image>),
       "content": (
         <div>Added support for TypeScript definition paths.</div>)
     },
     {
+      "date": "2016-08-02",
+      "title": "Python, Rust, Docker, vimrc support",
+      "logo": (<>
+        <Image src="/python.png" alt="Python logo" width={200} height={200}></Image>
+        <Image src="/rust.png" alt="rust logo" width={200} height={200}></Image>
+        <Image src="/docker.png" alt="Docker logo" width={200} height={112}></Image>
+        <Image src="/vim.png" alt="vimrc logo" width={200} height={200}></Image>
+      </>
+      ),
+      "content": "Added support for Dockerhub."
+    },
+    {
       "date": "2016-09-01",
-      "title": "10,000 active users",
+      "title": "10,000 users",
+      "badge": "Milestone",
       "content": (
-        <div>OctoLinker reached 10,000 active users.</div>)
+        <div>10,000 active users.</div>)
     },
     {
       "date": "2016-10-19",
       "title": ".NET Core support",
+      "logo": (<>
+        <Image src="/dotnet.png" alt=".NET logo" width={200} height={200}></Image>
+      </>),
       "content": (
-        <div>Added support for .NET Core project.json file.</div>)
+        <div>Added support for .NET Core <code>project.json</code> files.</div>)
+    },
+    {
+      "date": "2017-11-10",
+      "new_contributor": "xt0rted",
+    },
+    {
+      "date": "2016-12-04",
+      "title": "README and issues support",
+      "content": "Added support to link dependencies from Readme's and Issues."
     },
     {
       "date": "2017-01-31",
       "title": "Go dependencies support",
+      "logo": (<Image src="/go.png" alt="GO logo" width={200} height={200}></Image>),
       "content": (
-        <div>Added support for Go dependencies.</div>)
-    },
-    {
-      "date": "2017-03-10",
-      "title": "CSS & HTML imports",
-      "content": (
-        <div>Added support for CSS @import and HTML imports.</div>)
+        <div>Added support for Go</div>)
     },
     {
       "date": "2017-03-28",
       "title": "More language support",
+      "logo": (<>
+        <Image src="/haskell.png" alt="haskell logo" width={200} height={200}></Image>
+        <Image src="/sass.png" alt="sass logo" width={200} height={200}></Image>
+        <Image src="/less.png" alt="less logo" width={200} height={200}></Image>
+      </>),
       "content": (
         <div>Added support for Haskell, Sass, and LessCSS.</div>)
     },
     {
       "date": "2017-11-09",
       "title": "Java support",
+      "logo": (<Image src="/java.png" alt="java logo" width={200} height={200}></Image>),
       "content": (
         <div>Added Java core class linking, including documentation support.</div>)
     },
@@ -168,19 +215,30 @@ export default function Home() {
       "date": "2018-08-13",
       "title": "Dependency linking in PRs",
       "content": (
-        <div>v4.20.0 released—linked npm, Bower, and Composer dependencies in Pull Requests.</div>)
+        <div>Link dependencies in Pull Requests to make you the world's fastest code reviewer </div>)
+    },
+    {
+      "date": "2018-07-20",
+      "title": "End 2 end testing",
+      "content": (
+        <div>
+          We completed our testing pyramid by adding E2E testing using puppeteer. It's unbelievable simple to contribute E2E tests now. Here is how it works https://medium.com/@buckstefan/how-octolinker-runs-automate-e2e-tests-using-puppeteer-64db3622bec0
+        </div>)
     },
     {
       "date": "2019-06-06",
       "title": "Major rework of link resolution",
       "content": (
-        <div>Major rework of link resolution, making navigation faster.</div>)
+        <div>Major rework of link resolution, making navigation faster. Super excited to finally announce the latest @OctoLinker release 🚀I’ve been working on this for the past half year. We’ve completely reworked the way we resolve links. Navigate and interact with GitHub faster than ever before!
+
+          Powered by Vercel and RedisGreen
+        </div>)
     },
     {
       "date": "2019-12-27",
       "title": "6-year anniversary",
       "content": (
-        <div>Celebrated 6 years—25,000 active users & 4,000 GitHub stars.</div>)
+        <div>25,000 active users and 4,000 GitHub stars.</div>)
     },
     {
       "date": "2020-04-12",
@@ -196,9 +254,7 @@ export default function Home() {
     },
     {
       "date": "2021-01-17",
-      "title": "New core contributor",
-      "content": (
-        <div>@fregante joined as a core contributor.</div>)
+      "new_contributor": "fregante",
     },
     {
       "date": "2021-04-29",
@@ -256,7 +312,7 @@ export default function Home() {
       </section>
 
       <section className="container max-w-screen-lg mx-auto pb-4 grid justify-center">
-        <div className=" w-full rounded-3xl backdrop-blur-md bg-white/30 border sm:p-5 drop-shadow-lg">
+        <div className=" w-full rounded-3xl backdrop-blur-md bg-blue-100/30 border sm:p-5 drop-shadow-lg">
           <div className="rounded-2xl bg-white h-full drop-shadow-md border-2 border-gray-100 overflow-hidden">
             <Image className='mx-auto max-w-screen-md' src="/screenshot.png" alt="OctoLinker screenshot" width={1780} height={1169} />
           </div>
@@ -304,6 +360,20 @@ export default function Home() {
                 'timeline-end': isOdd,
               })
 
+              if (item.new_contributor) {
+
+                item.title = "New core contributor";
+                item.content = (
+                  <div>
+                    <a href={`https://github.com/${item.new_contributor}`} rel="noopener noreferrer">@{item.new_contributor}</a> joined as a core contributor.
+                  </div>
+                )
+                item.logo = (
+                  <a href={`https://github.com/${item.new_contributor}`} rel="noopener noreferrer">
+                    <img src={`http://github.com/${item.new_contributor}.png`} width={300} height={300} alt="" />
+                  </a>)
+              }
+
 
 
               return (
@@ -319,8 +389,10 @@ export default function Home() {
                   <div className={classNames3}>
                     <div className="card">
                       <div className="card-body gap-4">
+                        {item.badge && <span className="badge badge-primary">{item.badge}</span>}
                         <h5 className="card-title text-lg">{item.title}</h5>
                         {item.content}
+                        {item.logo && (<div className="logos flex flex-wrap gap-4">{item.logo}</div>)}
                       </div>
                     </div>
                   </div>
