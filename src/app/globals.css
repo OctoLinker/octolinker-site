@@ -28,16 +28,16 @@ body {
   color: #fd4eff;
 }
 
-.timeline a {
+a {
   text-decoration: underline;
 }
-.timeline p {
+/* .timeline p {
   line-height: 1.6rem;;
   padding-top: 0.8rem;
 }
 .timeline p:first-child {
   padding-top: 0;
-}
+} */
 
 code {
   background-color: #f3f3f3;
@@ -47,9 +47,7 @@ code {
   border: 1px solid #eaeaea;
 }
 
-
-
-.timeline strong {
+strong {
   margin: 0 -0.2rem;
   padding: 0.1rem 0.4rem;
   border-radius: 0.8rem 0.3rem;
@@ -61,4 +59,9 @@ code {
     #ffe10034
   );
   box-decoration-break: clone;
+}
+
+.blur-xs {
+  --tw-blur: blur(2px);
+  filter: var(--tw-blur) var(--tw-brightness) var(--tw-contrast) var(--tw-grayscale) var(--tw-hue-rotate) var(--tw-invert) var(--tw-saturate) var(--tw-sepia) var(--tw-drop-shadow);
 }

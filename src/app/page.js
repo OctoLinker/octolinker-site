@@ -2,9 +2,21 @@ import Image from "next/image";
 import Head from 'next/head'
 import { Github, Users, Star, Globe, Rocket, Code, Link as LinkIcon, Award, Box, ArrowRight } from 'lucide-react';
 import cn from 'classnames'
+import { getImageProps } from 'next/image'
 
 const seoTitle = 'OctoLinker — Links together, what belongs together';
 const seoDesc = 'Navigate Github rojects, files and dependencies faster with OctoLinker'
+
+function getBackgroundImage(srcSet = '') {
+  const imageSet = srcSet
+    .split(', ')
+    .map((str) => {
+      const [url, dpi] = str.split(' ')
+      return `url("${url}") ${dpi}`
+    })
+    .join(', ')
+  return `image-set(${imageSet})`
+}
 
 export default function Home() {
 
@@ -80,7 +92,7 @@ export default function Home() {
       ],
       "content": (
         <p>
-          This was the project's first code contribution, introducing support for a new package manager, made by <a rel="noopener noreferrer" href="https://github.com/barryvdh">@barryvdh</a>.
+          This was the project's first code contribution, introducing <strong>support for a new package manager</strong>, made by <a rel="noopener noreferrer" href="https://github.com/barryvdh">@barryvdh</a>.
         </p>
       )
     },
@@ -88,18 +100,19 @@ export default function Home() {
       "date": "2015-08-24",
       "title": "Live-Resolver API",
       "badge": "Huge improvment",
-      "content": (
+      "content": (<>
         <p>
-          Earlier versions relied on large static lists for each supported registry bundled with the extension. This approach was not scalable and as it also impacted the browser performance. The new <strong>Live-Resolver API</strong> was introduced to resolve package links in real-time, ensuring up-to-date links and improved performance. This change also paved the way for future support of languages like Python, Ruby, and Go.
-        </p>)
+          Earlier versions relied on large static lists for each supported registry bundled with the extension. This approach was not scalable and as it also impacted the browser performance.</p>
+        <p>The new <strong>Live-Resolver API</strong> was introduced to resolve package links in real-time, ensuring up-to-date links and improved performance.
+        </p></>)
     },
     {
       "date": "2015-08-27",
-      "title": "New user record",
+      "title": "Growing user base 🎉",
       "content": (
-        <>
-          Surpassed 6,000 users after 1.5 years
-        </>)
+        <p>
+          Surpassed <strong>6,000 users</strong> after 1.5 years
+        </p>)
     },
     {
       "date": "2015-12-09",
@@ -109,69 +122,46 @@ export default function Home() {
         <p>Forced to rename 'GitHub Linker' due to legal reasons, <strong>OctoLinker was born.</strong> Thanks Christian Kahl for this amazing logo!</p>
       )
     },
-    {
-      "date": "2016-04-07",
-      "title": "Support for RubyGems",
-      "logos": [{ src: "/rubygems.png", alt: "rubygems logo" }],
-      "content": ""
-    },
+
     {
       "date": "2016-05-11",
       "title": "Support for Ruby",
-      "logos": [{ src: "/ruby.png", alt: "Ruby logo" }],
-      "content": (<p>OctoLinker supports now Ruby<code>require</code> statements</p>)
+      "logos": [{ src: "/rubygems.png", alt: "rubygems logo" }, { src: "/ruby.png", alt: "Ruby logo" }],
+      "content": (<p>Add support for <code>require</code> statements and <code>requirements.txt</code></p>)
     },
     {
       "date": "2016-05-15",
       "new_contributor": "josephfrazier"
     },
     {
-      "date": "2016-05-25",
-      "title": "Homebrew formular support",
-      "logos": [{ src: "/homebrew.png", alt: "Homebrew logo" }],
-      "content": (
-        <div>Added support for Homebrew formular navigation.</div>)
-    },
-    {
       "date": "2016-06-21",
-      "title": "Firefox release",
-      "image": { src: "/octolinker-firefox.jpg", alt: "Firefox logo" },
-      "content": "OctoLinker is now available for Firefox."
+      "new_browser": "Firefox",
     },
     {
       "date": "2016-08-02",
-      "title": "TypeScript support",
-      "logos": [{
-        src: "/typescript.png", alt: "Typescript logo"
-      }],
-      "content": (
-        <div>Added support for TypeScript definition paths.</div>)
-    },
-    {
-      "date": "2016-08-02",
-      "title": "Python, Rust, Docker, vimrc support",
-      "logo": (<>
-        <Image src="/python.png" alt="Python logo" width={200} height={200}></Image>
-        <Image src="/rust.png" alt="rust logo" width={200} height={200}></Image>
-        <Image src="/docker.png" alt="Docker logo" width={200} height={112}></Image>
-        <Image src="/vim.png" alt="vimrc logo" width={200} height={200}></Image>
-      </>
-      ),
-      "content": "Added support for Dockerhub."
+      "title": "More language support 🚀",
+      "logos": [
+        { src: "/python.png", alt: "Python logo" },
+        { src: "/rust.png", alt: "rust logo" },
+        { src: "/docker.png", alt: "Docker logo" },
+        { src: "/vim.png", alt: "vimrc logo" },
+        { src: "/typescript.png", alt: "typescript logo" },
+      ],
+      "content": "Added support for Python, Rust, Docker, Vim, and TypeScript."
     },
     {
       "date": "2016-09-01",
-      "title": "10,000 users",
-      "badge": "Milestone",
+      "title": "Still Growing 🎉",
+      "badge": "Millstone",
       "content": (
         <div>10,000 active users.</div>)
     },
     {
       "date": "2016-10-19",
       "title": ".NET Core support",
-      "logo": (<>
-        <Image src="/dotnet.png" alt=".NET logo" width={200} height={200}></Image>
-      </>),
+      "logos": [
+        { src: "/dotnet.png", alt: ".NET logo" }
+      ],
       "content": (
         <div>Added support for .NET Core <code>project.json</code> files.</div>)
     },
@@ -186,19 +176,19 @@ export default function Home() {
     },
     {
       "date": "2017-01-31",
-      "title": "Go dependencies support",
+      "title": "Go support",
       "logos": [{ src: "/go.png", alt: "GO logo" }],
       "content": (
-        <div>Added support for Go</div>)
+        <div>Added support for navigation Go dependecies</div>)
     },
     {
       "date": "2017-03-28",
       "title": "More language support",
-      "logo": (<>
-        <Image src="/haskell.png" alt="haskell logo" width={200} height={200}></Image>
-        <Image src="/sass.png" alt="sass logo" width={200} height={200}></Image>
-        <Image src="/less.png" alt="less logo" width={200} height={200}></Image>
-      </>),
+      "logos": [
+        { src: "/haskell.png", alt: "haskell logo" },
+        { src: "/sass.png", alt: "sass logo" },
+        { src: "/less.png", alt: "less logo" }
+      ],
       "content": (
         <div>Added support for Haskell, Sass, and LessCSS.</div>)
     },
@@ -211,72 +201,102 @@ export default function Home() {
     },
     {
       "date": "2018-08-13",
-      "title": "Dependency linking in PRs",
+      "title": "Pull Requests support",
+      "image": { src: "/pullrequest.png", alt: "Pull Request", width: 1838, height: 944 },
       "content": (
         <div>Link dependencies in Pull Requests to make you the world's fastest code reviewer </div>)
     },
     {
       "date": "2018-07-20",
-      "title": "End 2 end testing",
+      "title": "Testing made easy",
       "content": (
         <div>
-          We completed our testing pyramid by adding E2E testing using puppeteer. It's unbelievable simple to contribute E2E tests now. Here is how it works https://medium.com/@buckstefan/how-octolinker-runs-automate-e2e-tests-using-puppeteer-64db3622bec0
+          As OctoLinker grew in complexity, we needed a way to ensure that changes made by GitHub didn't break OctoLinker. The solution we came up with is <strong>unbelievable simple</strong>. It is as simple as adding a code comment.
+
+          <div className="text-xs md:text-sm bg-gray-700 font-mono my-6 py-3 pl-5 -mx-6">
+            <div className="text-gray-400 italic">//@OctoLinkerResolve(https://nodejs.org/api/fs.html)</div>
+            <div className="text-gray-200"><span className="text-purple-300">require</span>(<span className="text-blue-200">'fs'</span>)</div>
+          </div>
+
+          This is a test that checks if OctoLinker can resolve the <code>require('fs')</code> statement to the <code>fs.html</code> documentation page on the Node.js website. If you want to learn more about this, check out my blog post where I went into more detail about how we do end-to-end testing works.
         </div>)
     },
     {
       "date": "2019-06-06",
       "title": "Major rework of link resolution",
       "content": (
-        <div>Major rework of link resolution, making navigation faster. Super excited to finally announce the latest @OctoLinker release 🚀I’ve been working on this for the past half year. We’ve completely reworked the way we resolve links. Navigate and interact with GitHub faster than ever before!
+        <><p>Major rewrite to resolve links during initial page load, allowing to insert actual links into the DOM instead of just listening to click events. This also meant to upgrade our resolver API to handle the new load. Luckily we had two amazing sponsors.</p>
+          <div className="flex flex-wrap gap-6 flex-direction-column ">
+            <a href="https://vercel.com" rel="noopener noreferrer" className="w-1/3 bg-black px-3 py-2">
+              <Image src="/vercel.png" alt="Vercel logo" width={350} height={93}></Image>
+            </a>
+            <a href="https://memetria.com" rel="noopener noreferrer" className="w-1/3 py-2">
 
-          Powered by Vercel and RedisGreen
-        </div>)
+              <Image src="/memetria.png" alt="memetria logo" width={350} height={85}></Image>
+            </a>
+          </div>
+        </>)
     },
     {
       "date": "2019-12-27",
-      "title": "6-year anniversary",
+      "title": "6-year anniversary 🎈",
       "content": (
-        <div>25,000 active users and 4,000 GitHub stars.</div>)
+        <div>25,000 active users and 4,000 GitHub stars</div>)
+    },
+    {
+      "date": "2020-01-13",
+      "new_browser": "Edge"
     },
     {
       "date": "2020-04-12",
-      "title": "Hovercards added",
+      "title": "Hovercard",
+      "image": { src: "/hovercard.png", alt: "Hovercard", width: 1916, height: 800 },
       "content": (
-        <div>OctoLinker v6.3 added hovercards for dependency insights.</div>)
+        <div>Added hovercards for quick dependency insights, allowing users to view package details without leaving the page.</div>)
+    },
+    {
+      "date": "2020-05-04",
+      "title": "API load",
+      "content": (
+        <div>
+          <p>Our RESTful API <strong>resolved 1.8 million links</strong> each week or three links per second.
+          </p>
+        </div>)
     },
     {
       "date": "2020-08-19",
       "title": "GitHub Actions support",
+      "logos": [{ src: "/github-actions.png", alt: "GitHub Actions logo" }],
       "content": (
-        <div>OctoLinker v6.5.0 released—added more GitHub Actions support and better notifications.</div>)
+        <div>Support linking of GitHub Actions defined in workflow YAML files, making it easier to explore actions directly from any workflow file.</div>)
     },
     {
-      "date": "2021-01-17",
+      "date": "2021-01-12",
       "new_contributor": "fregante",
     },
     {
-      "date": "2021-04-29",
-      "title": "GitHub Archive Project feature",
-      "content": (
-        <div>OctoLinker selected as one of the '17,000 Greatest Hits' for the GitHub Archive Project.</div>)
+      "date": "2021-01-17",
+      "new_browser": "Safari",
     },
     {
-      "date": "2022-01-07",
-      "title": "Firefox issue fixed",
+      "date": "2021-04-29",
+      "title": "Arctic Code Vault",
       "content": (
-        <div>Fixed critical issue affecting OctoLinker for Firefox.</div>)
+        <div>OctoLinker selected as one of the <strong>17,000 Greatest Hits</strong> for the <a href="https://youtu.be/fzI9FNjXQ0o" rel="noopener noreferrer">GitHub Archive Project</a>.</div>)
     },
     {
       "date": "2022-04-26",
       "title": "Chrome Web Store badge",
+      "image": { src: "/chrome_badge.png", alt: "Chrome Web Store badge", width: 1318, height: 528 },
       "content": (
-        <div>Received 'Established Publisher' badge on Chrome Web Store.</div>)
+        <div>Received <strong>Established Publisher</strong> badge on Chrome Web Store.</div>)
     },
     {
       "date": "2023-05-08",
-      "title": "GitHub navigation changes",
+      "title": "The End",
       "content": (
-        <div>GitHub’s new code navigation affected OctoLinker, raising concerns over its future.</div>)
+        <div>
+          On May 8, 2023, GitHub released a new code view that broke OctoLinker. Despite various platform updates over the years, we managed to keep it running for nine years. Unfortunately, this latest change has made it impossible to maintain its functionality.</div>)
     }
   ]
 
@@ -301,20 +321,33 @@ export default function Home() {
 
       <section className="container max-w-screen-lg mx-auto pb-12 pt-12 grid justify-center text-center">
         <Image className='mx-auto pb-2' src="/octolinker.png" alt="OctoLinker logo" width={325 / 2} height={303 / 2} />
-        <div className="text-7xl">
-          <strong>OctoLinker</strong>
+        <div className="text-7xl font-bold">
+          OctoLinker
         </div>
         <div className="text-lg">
           Revolutionizing GitHub Navigation for 9 Years
         </div>
       </section>
 
-      <section className="container max-w-screen-lg mx-auto pb-4 grid justify-center">
+      {/* <section className="container max-w-screen-lg mx-auto pb-4 grid justify-center">
         <div className=" w-full rounded-3xl backdrop-blur-md bg-blue-100/30 border sm:p-5 drop-shadow-lg">
           <div className="rounded-2xl bg-white h-full drop-shadow-md border-2 border-gray-100 overflow-hidden">
             <Image className='mx-auto max-w-screen-md' src="/screenshot.png" alt="OctoLinker screenshot" width={1780} height={1169} />
           </div>
         </div>
+      </section> */}
+
+      <section className="container max-w-screen-md mx-auto mt-12 gap-4 grid px-4">
+        <p>
+          OctoLinker <strong>was a browser extension</strong> that enhanced GitHub by making dependencies and module imports clickable links. It allowed developers to navigate repositories more efficiently by turning package names into links.</p>
+        <p>
+
+          However, due to changes in GitHub, OctoLinker is <strong>no longer functional</strong>. Despite various platform updates over the years, we managed to <strong>keep it running for nine years</strong>, but this latest change has made it impossible to maintain its functionality.</p><p>
+
+          Thank you to everyone who supported and used OctoLinker over the years. It has been an incredible journey, and I’m proud of what we’ve achieved together.</p><p>
+
+          Below, you’ll find a<strong> timeline highlighting key moments</strong> from the past nine years of the project.
+        </p>
       </section>
 
       <div className="bg-white ">
@@ -341,7 +374,7 @@ export default function Home() {
           <Image className='mx-auto' src="/mascot-down.png" alt="OctoLinker down" width={410 / 2} height={210 / 2} />
         </div>
         {/* </div> */}
-        <div className="max-w-5xl mx-auto">
+        <div className="max-w-5xl mt-24 mx-auto">
 
           <ul className="timeline timeline-snap-icon max-md:timeline-compact timeline-vertical timeline-centered">
 
@@ -361,26 +394,38 @@ export default function Home() {
 
               if (item.new_contributor) {
 
-                item.title = "New core contributor";
+                item.title = "";
                 item.content = (
                   <div>
                     <a href={`https://github.com/${item.new_contributor}`} rel="noopener noreferrer">@{item.new_contributor}</a> joined as a core contributor.
                   </div>
                 )
-                item.logo = (
+                item.images = (
                   <a href={`https://github.com/${item.new_contributor}`} rel="noopener noreferrer">
-                    <img src={`http://github.com/${item.new_contributor}.png`} width={80} height={80} className="rounded" alt="" />
+                    <img src={`http://github.com/${item.new_contributor}.png`} width={80} height={80} className="rounded-full border border-gray-300" alt="" />
                   </a>)
+              }
+
+              if (item.new_browser) {
+                item.title = (
+                  <>
+                    <Image className="inline-block mr-1" src={`/${item.new_browser.toLocaleLowerCase()}.png`} alt={`${item.new_browser} logo`} width={24} height={24} /> {item.new_browser} release
+                  </>
+                );
+                item.content = `OctoLinker is now available for ${item.new_browser}.`
               }
 
               if (item.logos) {
 
                 item.images = (<div className="logos flex flex-wrap gap-3">
                   {item.logos.map((logo, index) => {
+
+                    const { props: { srcSet }, } = getImageProps({ alt: "", width: 200, height: 200, src: logo.src })
+                    const backgroundImage = getBackgroundImage(srcSet)
+                    const style = { backgroundImage }
+
                     return (
-                      <div key={index} className="size-16 relative">
-                        <Image src={logo.src} alt={logo.alt} className="w-16 rounded" layout={'fill'} objectFit={'contain'} />
-                      </div>
+                      <div key={index} className="size-12 relative bg-contain bg-center bg-no-repeat" style={style}></div>
                     )
                   })}
                 </div>)
@@ -388,8 +433,8 @@ export default function Home() {
 
               if (item.image) {
                 item.images = (
-                  <div className="relative size-48 md:size-64 md:mx-auto">
-                    <Image src={item.image.src} alt={item.image.alt} layout={'fill'} objectFit={'contain'}></Image>
+                  <div className="relative md:mx-auto">
+                    <Image src={item.image.src} alt={item.image.alt} width={item.image.width || 200} height={item.image.height || 200} />
                   </div>
                 )
               }
@@ -397,7 +442,7 @@ export default function Home() {
 
               return (
                 <li key={index}>
-                  <div className="timeline-middle h-0 relative z-0">
+                  <div className="timeline-middle h-0 relative z-10">
                     <span className="bg-octolinker-900  flex size-5 items-center justify-center rounded-full border-white border-4 relative z-10"></span>
                   </div>
                   <div className={classNames2}>
@@ -411,213 +456,37 @@ export default function Home() {
                     <div className="card">
                       <div className="card-body gap-4">
                         {item.badge && <span className="badge badge-primary">{item.badge}</span>}
-                        <h5 className="card-title text-lg">{item.title}</h5>
+                        {item.title && <h5 className="card-title text-lg">{item.title}</h5>}
                         {item.content}
                         {item.images}
                       </div>
                     </div>
                   </div>
-                  <hr className="border-4 bg-octolinker-100" />
+                  {index < timelineEvents.length - 1 && (
+                    <hr className="border-4 bg-octolinker-100 blur-xs z-0" />
+                  )}
                 </li>
               )
             })}
           </ul>
 
-          <div className="mt-8">
+          <div className="mt-2">
             <Image className='mx-auto' src="/mascot-tentacle.png" alt="OctoLinker Good bye" width={316 / 2} height={202 / 2} />
           </div>
-
-
-          <ul className="mt-24 timeline timeline-snap-icon max-md:timeline-compact timeline-vertical timeline-centered">
-
-            <li className="timeline-shift">
-              <div className="timeline-middle h-16">
-                <span className="bg-success/20 flex size-8 items-center justify-center rounded-full">
-                  <span className="icon-[tabler--photo] text-success size-5"></span>
-                </span>
-              </div>
-              <div className="timeline-end mt-6 px-1 md:mt-8">
-                <div className="text-base-content/50 text-sm font-normal">24 day's ago</div>
-              </div>
-              <div className="timeline-start me-4 mb-8">
-                <div className="card">
-                  <div className="card-body gap-4">
-                    <h5 className="card-title text-lg">Heather added 4 images to album</h5>
-                    <p>
-                      In the Select Image for Project dialog box, choose one of the following: Under the Upload New Image section
-                    </p>
-                    <div className="flex flex-wrap gap-4">
-
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr />
-            </li>
-            <li>
-              <div className="timeline-middle h-16">
-                <span className="bg-warning/20 flex size-8 items-center justify-center rounded-full">
-                  <span className="icon-[tabler--star] text-warning size-5"></span>
-                </span>
-              </div>
-              <div className="timeline-start me-4 mt-8 max-md:pt-2">
-                <div className="text-base-content/50 text-sm font-normal">2 week's ago</div>
-              </div>
-              <div className="timeline-end ms-4 mb-8">
-                <div className="card">
-                  <div className="card-body gap-4">
-                    <h5 className="card-title text-lg">Loretta wrote a review on Flyon</h5>
-                    <div className="flex items-center gap-2">
-                      <div className="avatar">
-                        <div className="size-9.5 rounded-full">
-                          <img src="https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png" alt="User Avatar" />
-                        </div>
-                      </div>
-                      <div>
-                        <p className="text-sm font-medium">Loretta Moore</p>
-                        <p className="text-sm">CTO of Airbnb</p>
-                      </div>
-                    </div>
-                    <div className="flex flex-wrap items-center justify-between gap-2 text-nowrap">
-                      <div className="text-warning flex items-center">
-                        <span className="icon-[tabler--star-filled] size-5"></span>
-                        <span className="icon-[tabler--star-filled] size-5"></span>
-                        <span className="icon-[tabler--star-filled] size-5"></span>
-                        <span className="icon-[tabler--star-filled] size-5"></span>
-                        <span className="icon-[tabler--star-filled] size-5"></span>
-                      </div>
-                      <span className="badge badge-soft badge-success uppercase">
-                        <img src="https://cdn.flyonui.com/fy-assets/avatar/avatar-6.png" alt="Anna" className="size-4.5 rounded-full" />
-                        Verified buyer
-                      </span>
-                    </div>
-                    <p>
-                      I wish I could select more than one main reason for rating this. I love how they constantly work on to make
-                      the template better. I am so thankful for this. Also, in the past, they had responded well to my tickets.
-                      Thank you for this great theme, for such an amazing support, for the better updates. I wish I could rate
-                      this for so many times. I highly recommend this template!
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <hr />
-            </li>
-            <li className="timeline-shift">
-              <div className="timeline-middle h-16">
-                <span className="bg-info/20 flex size-8 items-center justify-center rounded-full">
-                  <span className="icon-[tabler--chart-pie] text-info size-5"></span>
-                </span>
-              </div>
-              <div className="timeline-end mt-6 px-1 md:mt-8">
-                <div className="text-base-content/50 text-sm font-normal">A week ago</div>
-              </div>
-              <div className="timeline-start me-4 mb-8 w-full">
-                <div className="card">
-                  <div className="card-body gap-4">
-                    <h5 className="card-title text-lg">Julia stiles shared an earnings report</h5>
-                    <div>
-                      <div className="flex flex-wrap items-center gap-0.5 mb-1">
-                        <h4 className="text-base-content font-medium text-xl">$24,895</h4>
-                        <p className="text-success flex items-center">
-                          <span className="icon-[tabler--caret-up-filled] me-0.5"></span>
-                          10%
-                        </p>
-                      </div>
-                      <p className="text-sm">Compared to $84,325 last year</p>
-                    </div>
-                    <div className="space-y-4">
-                      <div className="flex flex-wrap items-center justify-between gap-2">
-                        <div className="flex items-center gap-3">
-                          <div className="avatar">
-                            <div className="bg-base-content/5 size-10 rounded-md">
-                              <img src="https://cdn.flyonui.com/fy-assets/components/card/icon-1.png" alt="Zipcar Logo" />
-                            </div>
-                          </div>
-                          <div>
-                            <div className="text-base-content font-medium">Zipcar</div>
-                            <div className="text-sm">Vuejs, React & HTML</div>
-                          </div>
-                        </div>
-                        <div className="flex flex-col gap-2 max-sm:w-full">
-                          <p className="text-base-content">$24,895.65</p>
-                          <div className="progress" role="progressbar" aria-label="Progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                            <div className="progress-bar progress-primary w-3/4"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex flex-wrap items-center justify-between gap-2">
-                        <div className="flex items-center gap-3">
-                          <div className="avatar">
-                            <div className="bg-base-content/5 size-10 rounded-md">
-                              <img src="https://cdn.flyonui.com/fy-assets/components/card/icon-2.png" alt="Bitbank logo" />
-                            </div>
-                          </div>
-                          <div>
-                            <div className="text-base-content font-medium">Bitbank</div>
-                            <div className="text-sm">Sketch, Figma & XD</div>
-                          </div>
-                        </div>
-                        <div className="flex flex-col gap-2 max-sm:w-full">
-                          <p className="text-base-content">$8,6500.20</p>
-                          <div className="progress" role="progressbar" aria-label="Progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                            <div className="progress-bar progress-info w-3/4"></div>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="flex flex-wrap items-center justify-between gap-2">
-                        <div className="flex items-center gap-3">
-                          <div className="avatar">
-                            <div className="bg-base-content/5 size-10 rounded-md">
-                              <img src="https://cdn.flyonui.com/fy-assets/components/card/icon-3.png" alt="aviato logo" />
-                            </div>
-                          </div>
-                          <div>
-                            <div className="text-base-content font-medium">Aviato</div>
-                            <div className="text-sm">HTML & Angular</div>
-                          </div>
-                        </div>
-                        <div className="flex flex-col gap-2 max-sm:w-full">
-                          <p className="text-base-content">$1,2450.80</p>
-                          <div className="progress" role="progressbar" aria-label="Progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100">
-                            <div className="progress-bar progress-secondary w-3/4"></div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <hr />
-            </li>
-            <li>
-              <div className="timeline-middle h-16">
-                <span className="bg-primary/20 flex size-8 items-center justify-center rounded-full">
-                  <span className="icon-[tabler--folder] text-primary size-5"></span>
-                </span>
-              </div>
-              <div className="timeline-start me-4 mt-8 max-md:pt-2">
-                <div className="text-base-content/50 text-sm font-normal">2 day’s ago</div>
-              </div>
-              <div className="timeline-end ms-4">
-                <div className="card">
-                  <div className="card-body gap-4">
-                    <h5 className="card-title text-lg">Johnson shared NextJS project</h5>
-                    <p>
-                      The project organization's structure and process are meticulously crafted to align with both corporate and
-                      project goals. Key components include planning, execution, monitoring, controlling, resource allocation,
-                      risk management, and stakeholder engagement.
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <hr />
-            </li>
-          </ul>
+          <div className="mt-12 mb-24 container max-w-screen-md mx-auto gap-4 flex flex-col px-4">
+            <h2 className="text-2xl">What's next?</h2>
+            <p>
+              There are plenty other great browser extensions out there aiming to improve your GitHub experience. You can find some of them on the <a href="https://stefanbuck.com/awesome-browser-extensions-for-github"><strong>Awesome Browser Extensions for GitHub</strong></a> list.
+            </p>
+            <p>
+              Stefan Buck, the creator of OctoLinker, is now working on <a href="https://pullrequestbadge.com" rel="noopener noreferrer"><strong>Pull Request Badge</strong></a>, contininung his passion for consitency and productivity on GitHub.
+            </p>
+          </div>
 
 
         </div>
 
-      </div>
+      </div >
     </div >
   )
 }
