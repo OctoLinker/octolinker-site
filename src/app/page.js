@@ -8,14 +8,14 @@ const seoTitle = 'OctoLinker — Links together, what belongs together';
 const seoDesc = 'Navigate Github rojects, files and dependencies faster with OctoLinker'
 
 function getBackgroundImage(srcSet = '') {
-  const imageSet = srcSet
+  const imageet = srcSet
     .split(', ')
     .map((str) => {
       const [url, dpi] = str.split(' ')
       return `url("${url}") ${dpi}`
     })
     .join(', ')
-  return `image-set(${imageSet})`
+  return `image-set(${imageet})`
 }
 
 export default function Home() {
@@ -166,13 +166,16 @@ export default function Home() {
         <div>Added support for .NET Core <code>project.json</code> files.</div>)
     },
     {
-      "date": "2017-11-10",
-      "new_contributor": "xt0rted",
-    },
-    {
       "date": "2016-12-04",
       "title": "README and issues support",
       "content": "Added support to link dependencies from Readme's and Issues."
+    },
+    {
+      "date": "2017-01-18",
+      "title": "Stickers",
+      "image": { src: "/stickers.jpg", alt: "OctoLinker sticker", width: 600, height: 450 },
+      "content": (
+        <div>Fresh from the press, 360 OctoLinker stickers</div>)
     },
     {
       "date": "2017-01-31",
@@ -200,11 +203,8 @@ export default function Home() {
         <div>Added Java core class linking, including documentation support.</div>)
     },
     {
-      "date": "2018-08-13",
-      "title": "Pull Requests support",
-      "image": { src: "/pullrequest.png", alt: "Pull Request", width: 1838, height: 944 },
-      "content": (
-        <div>Link dependencies in Pull Requests to make you the world's fastest code reviewer </div>)
+      "date": "2017-11-10",
+      "new_contributor": "xt0rted",
     },
     {
       "date": "2018-07-20",
@@ -220,6 +220,13 @@ export default function Home() {
 
           This is a test that checks if OctoLinker can resolve the <code>require('fs')</code> statement to the <code>fs.html</code> documentation page on the Node.js website. If you want to learn more about this, check out my blog post where I went into more detail about how we do end-to-end testing works.
         </div>)
+    },
+    {
+      "date": "2018-08-13",
+      "title": "Pull Requests support",
+      "image": { src: "/pullrequest.png", alt: "Pull Request", width: 1838, height: 944 },
+      "content": (
+        <div>Link dependencies in Pull Requests to make you the world's fastest code reviewer </div>)
     },
     {
       "date": "2019-06-06",
@@ -241,7 +248,7 @@ export default function Home() {
       "date": "2019-12-27",
       "title": "6-year anniversary 🎈",
       "content": (
-        <div>25,000 active users and 4,000 GitHub stars</div>)
+        <div><strong>25,000 active users</strong> and 4,000 GitHub stars</div>)
     },
     {
       "date": "2020-01-13",
@@ -443,7 +450,7 @@ export default function Home() {
               return (
                 <li key={index}>
                   <div className="timeline-middle h-0 relative z-10">
-                    <span className="bg-octolinker-900  flex size-5 items-center justify-center rounded-full border-white border-4 relative z-10"></span>
+                    <span className="bg-octolinker-900 flex size-5 items-center justify-center rounded-full border-white border-4 relative z-10"></span>
                   </div>
                   <div className={classNames2}>
                     <div className="text-sm font-normal text-gray-400 -mt-2">{new Date(item.date).toLocaleDateString("en-GB", {
@@ -453,10 +460,17 @@ export default function Home() {
                     })}</div>
                   </div>
                   <div className={classNames3}>
-                    <div className="card">
+                    <div className="md:card">
                       <div className="card-body gap-4">
-                        {item.badge && <span className="badge badge-primary">{item.badge}</span>}
-                        {item.title && <h5 className="card-title text-lg">{item.title}</h5>}
+                        <div>
+                          <div className="md:hidden text-sm font-normal text-gray-400 -mt-2">{new Date(item.date).toLocaleDateString("en-GB", {
+                            day: "numeric",
+                            month: "long",
+                            year: "numeric"
+                          })}</div>
+                          {item.badge && <span className="badge badge-primary">{item.badge}</span>}
+                          {item.title && <h5 className="card-title text-lg">{item.title}</h5>}
+                        </div>
                         {item.content}
                         {item.images}
                       </div>
