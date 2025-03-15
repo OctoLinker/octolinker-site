@@ -336,13 +336,13 @@ export default function Home() {
         </div>
       </section>
 
-      {/* <section className="container max-w-screen-lg mx-auto pb-4 grid justify-center">
+      <section className="container max-w-screen-lg mx-auto pb-4 grid justify-center">
         <div className=" w-full rounded-3xl backdrop-blur-md bg-blue-100/30 border sm:p-5 drop-shadow-lg">
           <div className="rounded-2xl bg-white h-full drop-shadow-md border-2 border-gray-100 overflow-hidden">
             <Image className='mx-auto max-w-screen-md' src="/screenshot.png" alt="OctoLinker screenshot" width={1780} height={1169} />
           </div>
         </div>
-      </section> */}
+      </section>
 
       <section className="container max-w-screen-md mx-auto mt-12 gap-4 grid px-4">
         <p>
