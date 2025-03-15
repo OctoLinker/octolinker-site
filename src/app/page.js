@@ -218,7 +218,7 @@ export default function Home() {
             <div className="text-gray-200"><span className="text-purple-300">require</span>(<span className="text-blue-200">'fs'</span>)</div>
           </div>
 
-          This is a test that checks if OctoLinker can resolve the <code>require('fs')</code> statement to the <code>fs.html</code> documentation page on the Node.js website. If you want to learn more about this, check out my blog post where I went into more detail about how we do end-to-end testing works.
+          This is a test that checks if OctoLinker can resolve the <code>require('fs')</code> statement to the <code>fs.html</code> documentation page on the Node.js website. If you want to learn more about this, check out this <a href="https://stefanbuck.com/blog/how-octolinker-runs-automate-e2e-tests-using-puppeteer" rel="noopener noreferrer" >blog post</a> where I went into more detail about how we do end-to-end testing works.
         </div>)
     },
     {
