@@ -494,7 +494,7 @@ export default function Home() {
               There are plenty other great browser extensions out there aiming to improve your GitHub experience. You can find some of them on the <a href="https://stefanbuck.com/awesome-browser-extensions-for-github"><strong>Awesome Browser Extensions for GitHub</strong></a> list.
             </p>
             <p>
-              <a href="https://stefanbuck.com/" rel="noopener noreferrer" >Stefan Buck</a>, the creator of OctoLinker, is now working on <a href="https://pullrequestbadge.com" rel="noopener noreferrer"><strong>Pull Request Badge</strong></a> GitHub App, contininung his passion for consitency and productivity on GitHub.
+              <a href="https://stefanbuck.com/" rel="noopener noreferrer" >Stefan Buck</a>, the creator of OctoLinker, is now working on <a href="https://pullrequestbadge.com" rel="noopener noreferrer"><strong>Pull Request Badge</strong></a> GitHub App, contininung his passion for consistency and productivity on GitHub.
             </p>
 
             <a className="no-underline" href="https://pullrequestbadge.com" rel="noopener noreferrer">
